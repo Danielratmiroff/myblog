@@ -1,5 +1,5 @@
 [title]: <> (Daniel Ratmiroff)
-[icon]: <> (http://vitalik.ca/images/icon.png)
+[icon]: <> (https://danielratmiroff.com/images/logo.png)
 [posts_directory]: <> (general)
 [homepage_category]: <> (general)
 [domain]: <> (https://danielratmiroff.com/)
