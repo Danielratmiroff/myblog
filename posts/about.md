@@ -1,6 +1,6 @@
-[category]: <> (About me)
+[category]: <> (About)
 [date]: <> (2022/05/22)
-[title]: <> (About me)
+[title]: <> (About)
 
 ![Daniel Photo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.png)
 
