@@ -1,19 +1,19 @@
 <?xml version="1.0" ?>
 <rss version="2.0">
 <channel>
-  <title>Vitalik Buterin's website</title>
-  <link>https://vitalik.ca/</link>
-  <description>Vitalik Buterin's website</description>
+  <title>Daniel Ratmiroff</title>
+  <link>https://danielratmiroff.com//</link>
+  <description>Daniel Ratmiroff</description>
   <image>
       <url>http://vitalik.ca/images/icon.png</url>
-      <title>Vitalik Buterin's website</title>
-      <link>https://vitalik.ca/</link>
+      <title>Daniel Ratmiroff</title>
+      <link>https://danielratmiroff.com//</link>
   </image>
 
 <item>
 <title>Hello world</title>
-<link>https://vitalik.ca/general/2020/10/24/hello.html</link>
-<guid>https://vitalik.ca/general/2020/10/24/hello.html</guid>
+<link>https://danielratmiroff.com//general/2020/10/24/hello.html</link>
+<guid>https://danielratmiroff.com//general/2020/10/24/hello.html</guid>
 <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
 <description></description>
 </item>
