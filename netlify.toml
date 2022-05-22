@@ -2,5 +2,5 @@
 # unless otherwise overridden by more specific contexts.
 
 [build]
-  command = "CI=false && python3 publish.py posts/*"
+  # command = "CI=false"
   publish = "site"

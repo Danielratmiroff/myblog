@@ -2,7 +2,8 @@
 [date]: <> (2022/05/22)
 [title]: <> (About me)
 
-![Daniel Photo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.jpg)
+![Daniel Photo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.png)
+
 I'm a software engineer that takes great pleasure in making other people's live easier. 👋🤖
 
 **My interests:**
