@@ -1,5 +1,5 @@
 [title]: <> (Daniel Ratmiroff)
 [icon]: <> (https://danielratmiroff.com/images/logo.png)
 [posts_directory]: <> (general)
-[homepage_category]: <> (general)
+[homepage_category]: <> (About me)
 [domain]: <> (https://danielratmiroff.com/)
