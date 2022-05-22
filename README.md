@@ -1,8 +1,8 @@
-# Personal blog.
+# My blog
 
 URL: [danielratmiroff.com](https://www.danielratmiroff.com)
 
----
+--
 
 Built with Vitalik Buterin's [blogmaker](https://github.com/vbuterin/blogmaker), plus minor customisations.
 
