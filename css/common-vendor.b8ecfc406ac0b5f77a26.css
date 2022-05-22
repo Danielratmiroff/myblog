@@ -2,7 +2,7 @@
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-@font-face { font-family: 'FontAwesome'; src: url( /build/674f50d287a8c48dc19ba404d20fe713.eot ); src: url( /build/674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0 ) format( 'embedded-opentype' ), url( /build/af7ae505a9eed503f8b8e6982036873e.woff2 ) format( 'woff2' ), url( /build/fee66e712a8a08eef5805a46892932ad.woff ) format( 'woff' ), url( /build/b06871f281fee6b241d60582ae9369b9.ttf ) format( 'truetype' ), url( /build/912ec66d7572ff821749319396470bde.svg#fontawesomeregular ) format( 'svg' ); font-weight: normal; font-style: normal; }
+ @font-face { font-family: 'FontAwesome'; src: url( /build/674f50d287a8c48dc19ba404d20fe713.eot ); src: url( /build/674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0 ) format( 'embedded-opentype' ), url( /build/af7ae505a9eed503f8b8e6982036873e.woff2 ) format( 'woff2' ), url( /build/fee66e712a8a08eef5805a46892932ad.woff ) format( 'woff' ), url( /build/b06871f281fee6b241d60582ae9369b9.ttf ) format( 'truetype' ), url( /build/912ec66d7572ff821749319396470bde.svg#fontawesomeregular ) format( 'svg' ); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .fa-lg { font-size: 1.33333333em; line-height: .75em; vertical-align: -15%; }
 .fa-2x { font-size: 2em; }
@@ -719,4 +719,3 @@
 .fa-meetup:before { content: "\f2e0"; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect( 0, 0, 0, 0 ); border: 0; }
 .sr-only-focusable:active, .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
-
