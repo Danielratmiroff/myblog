@@ -1,8 +1,8 @@
-[category]: <> (General)
-[date]: <> (2020/10/24)
-[title]: <> (Hello world)
+[category]: <> (About me)
+[date]: <> (2022/05/22)
+[title]: <> (About me)
 
-This is a blog post!
+This is my first update
 
 Here's some code:
 
