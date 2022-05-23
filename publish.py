@@ -6,12 +6,12 @@ from unicodedata import category
 
 HEADER_TEMPLATE = """
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
-<link rel="stylesheet" type="text/css" href="$root/css/font-vendor.b86e2bf451b246b1a88e.css">
-<link rel="stylesheet" type="text/css" href="$root/css/fretboard.f32f2a8d5293869f0195.css">
-<link rel="stylesheet" type="text/css" href="$root/css/pretty.0ae3265014f89d9850bf.css">
-<link rel="stylesheet" type="text/css" href="$root/css/pretty-vendor.83ac49e057c3eac4fce3.css">
-<link rel="stylesheet" type="text/css" href="$root/css/misc.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/font-vendor.b86e2bf451b246b1a88e.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/fretboard.f32f2a8d5293869f0195.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/pretty.0ae3265014f89d9850bf.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/pretty-vendor.83ac49e057c3eac4fce3.css">
+<link rel="stylesheet" type="text/css" href="/$root/css/misc.css">
 <script type="text/javascript" id="MathJax-script" async
   src="/scripts/mathjax.js">
 </script>
