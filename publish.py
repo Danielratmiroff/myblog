@@ -55,7 +55,7 @@ TOC_TITLE_TEMPLATE = """
 <center><h1 style="border-bottom:0px"> {0} </h1></center>
 """
 
-FOOTER = """<p class="footer">site made with: <a href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a></p></div> """
+FOOTER = """<p class="footer">Made with: <a href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a></p></div> """
 
 TOC_START = """
 <br>
