@@ -1,4 +1,4 @@
-[category]: <> (About)
+[category]: <> (general)
 [date]: <> (2022/05/22)
 [title]: <> (About)
 
