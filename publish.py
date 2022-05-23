@@ -258,8 +258,6 @@ if __name__ == '__main__':
             FOOTER
         )
 
-        print(total_file_contents)
-
         print("Path selected: {}".format(path))
 
         # Make sure target directory exists
@@ -301,8 +299,6 @@ if __name__ == '__main__':
         ]
         toc = make_toc(category_toc_items, global_config, categories, category)
         open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
-
-    print(make_toc(homepage_toc_items, global_config, categories))
 
     open('site/feed.xml', 'w').write(feed)
     open('site/index.html',
