@@ -94,6 +94,7 @@ def make_toc_item(metadata):
     year, month, day = metadata['date'].split('/')
     month = 'JanFebMarAprMayJunJulAugSepOctNovDec'[int(month)*3-3:][:3]
     link = os.path.join('/', metadata_to_path(metadata))
+    print(TOC_ITEM_TEMPLATE.format(year+' '+month+' '+day, link, metadata['title']))
     return TOC_ITEM_TEMPLATE.format(year+' '+month+' '+day, link, metadata['title'])
 
 if __name__ == '__main__':
