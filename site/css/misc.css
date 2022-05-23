@@ -1,95 +1,107 @@
 .post-list {
   margin-left: 0;
   padding-left: 0;
-  list-style: none; }
-  .post-list > li {
-    margin-bottom: 30px; }
+  list-style: none;
+}
+.post-list > li {
+  margin-bottom: 30px;
+}
 
+.post-category {
+  font-size: 12px;
+  border-radius: 100px;
+  padding: 0px 5px 2px;
+}
+
+.post-category.blue {
+  background-color: #e0f3fe;
+}
+
+.post-category.darkblue {
+  background-color: #c2d3ff;
+}
+
+.post-category.red {
+  background-color: #ffe5e0;
+}
+
+.post-category .purple {
+  background-color: #eae7fc;
+}
+
+.post-category.orange {
+  background-color: #ffe1b9;
+}
+
+.post-category.green {
+  background-color: #cff4de;
+}
 
 @media only screen and (orientation: landscape) {
-    .post-link {
-      display: block;
-      font-size: 24px; }
+  .post-link {
+    display: block;
+    font-size: 24px;
+  }
 
-    .post-meta {
-      font-size: 14px;
-      color: #828282; }
+  .post-meta {
+    font-size: 14px;
+    color: #828282;
+  }
 
-    .post-category {
-      font-size: 12px;
-      border-radius: 100px;
-      padding: 0px 5px 2px; }
-    
-    .post-category.blue {
-      background-color: #E0F3FE;
-    }
-    
-    .post-category.darkblue {
-      background-color: #C2D3FF;
-    }
-
-    .post-category.red {
-      background-color: #FFE5E0;
-    }
-
-    .post-category .purple {
-      background-color: #EAE7FC;
-    }
-
-    .post-category.orange {
-      background-color: #FFE1B9;
-    }
-
-    .post-category.green {
-      background-color: #CFF4DE;
-    }
-
-    .toc-category {
-      display: inline-block;
-      width: 100px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 6px;
-      padding-left: 6px; }
+  .toc-category {
+    display: inline-block;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
 }
 
 @media only screen and (orientation: portrait) {
-    .post-link {
-      display: block; }
-    .post-meta {
-      font-size: 24px;
-      color: #828282; }
+  .post-link {
+    display: block;
+  }
+  .post-meta {
+    font-size: 24px;
+    color: #828282;
+  }
 
-    .toc-category {
-      display: inline-block;
-      width: 200px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-right: 12px;
-      padding-left: 12px; }
+  .toc-category {
+    display: inline-block;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
-
 
 .python .dv {
-  color: #0086b3 }
+  color: #0086b3;
+}
 
 .python .kw {
-  color: #a71d5d }
+  color: #a71d5d;
+}
 
 .python .cf {
-  color: #a71d5d }
-
-@font-face {
-    font-family: MJXc-TeX-math-Iw;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
-}
-@font-face {
-    font-family: MJXZERO;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
-}
-@font-face {
-    font-family: MJXTEX;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+  color: #a71d5d;
 }
 
-.math { font-family: MJXc-TeX-math-Iw }
+@font-face {
+  font-family: MJXc-TeX-math-Iw;
+  src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff");
+}
+@font-face {
+  font-family: MJXZERO;
+  src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff");
+}
+@font-face {
+  font-family: MJXTEX;
+  src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff");
+}
+
+.math {
+  font-family: MJXc-TeX-math-Iw;
+}

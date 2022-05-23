@@ -5,6 +5,7 @@ import datetime
 from unicodedata import category
 
 HEADER_TEMPLATE = """
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
 <link rel="stylesheet" type="text/css" href="$root/css/font-vendor.b86e2bf451b246b1a88e.css">
@@ -30,6 +31,7 @@ HEADER_TEMPLATE = """
 }
 .math { font-family: MJXc-TeX-math-Iw }
 </style>
+</head>
 <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 """
 
