@@ -5,7 +5,6 @@ import datetime
 from unicodedata import category
 
 HEADER_TEMPLATE = """
-<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
 <link rel="stylesheet" type="text/css" href="$root/css/font-vendor.b86e2bf451b246b1a88e.css">
@@ -36,6 +35,7 @@ HEADER_TEMPLATE = """
 """
 
 RSS_LINK = """
+<head>
 <link rel="alternate" type="application/rss+xml" href="{}/feed.xml" title="{}">
 """
 
@@ -48,13 +48,14 @@ TITLE_TEMPLATE = """
 <title> {0} </title>
 """
 
+
 TOC_TITLE_TEMPLATE = """
 <title> {0} </title>
 <br>
 <center><h1 style="border-bottom:0px"> {0} </h1></center>
 """
 
-FOOTER = """ </div> """
+FOOTER = """<p class="footer">site made with: <a href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a></p></div> """
 
 TOC_START = """
 <br>
@@ -220,7 +221,8 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         make_categories_header(all_categories, root_path) +
         TOC_START +
         ''.join(toc_items) +
-        TOC_END
+        TOC_END +
+        FOOTER
     )
 
 
@@ -258,8 +260,6 @@ if __name__ == '__main__':
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
         )
-
-        print(total_file_contents)
 
         print("Path selected: {}".format(path))
 
@@ -309,6 +309,10 @@ if __name__ == '__main__':
 
     # Copy CSS and scripts files
     this_file_directory = os.path.dirname(__file__)
+
+    print(1)
+
+    print(this_file_directory)
     os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'css')))
     os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'scripts')))
     os.system('rsync -av images site/')

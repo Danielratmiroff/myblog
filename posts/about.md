@@ -7,6 +7,8 @@
 
 I'm a software engineer that takes great pleasure in making other people's live easier. 👋🤖
 
+&nbsp;
+
 **My interests:**
 
 - Fronteeeeeeend / UX
@@ -79,7 +81,7 @@ _2015 - 6 mos • Caracas, Venezuela_
 
 ---
 
-### Schooling
+### Education
 
 ![The Open University logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ou.png)\
 
