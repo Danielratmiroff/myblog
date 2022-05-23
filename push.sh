@@ -11,6 +11,8 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 COMMIT_COMMENT="${COMMENT:-"Progress"}"
 BRANCH="${BRANCH_PARAM:-$CURRENT_BRANCH}"
 
+./build.sh
+
 if [ "${BRANCH_PARAM}" = "--help" ]; then
 	echo "push.sh BranchName or \"\" (for current one) \"Commit-Message\""
 	exit 1

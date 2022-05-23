@@ -257,6 +257,8 @@ if __name__ == '__main__':
             FOOTER
         )
 
+        print(total_file_contents)
+
         print("Path selected: {}".format(path))
 
         # Make sure target directory exists
