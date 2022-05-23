@@ -9,7 +9,7 @@ I'm a software engineer that takes great pleasure in making other people's live 
 
 **My interests:**
 
-- Frontend / UX
+- Fronteeeeeeend / UX
 - Automation
 - IoT
 - DevOps
