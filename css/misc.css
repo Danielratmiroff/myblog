@@ -15,6 +15,36 @@
       font-size: 14px;
       color: #828282; }
 
+    .post-category {
+      font-size: 12px;
+      border-radius: 100px;
+      padding: 0px 5px 2px;
+      vertical-align: top; }
+    
+    .post-category.blue {
+      background-color: #E0F3FE;
+    }
+    
+    .post-category.darkblue {
+      background-color: #C2D3FF;
+    }
+
+    .post-category.red {
+      background-color: #FFE5E0;
+    }
+
+    .post-category .purple {
+      background-color: #EAE7FC;
+    }
+
+    .post-category.orange {
+      background-color: #FFE1B9;
+    }
+
+    .post-category.green {
+      background-color: #CFF4DE;
+    }
+
     .toc-category {
       display: inline-block;
       width: 100px;

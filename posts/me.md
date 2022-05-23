@@ -1,7 +1,7 @@
-[category]: <> (general)
+[category]: <> (about)
 [date]: <> (2022/05/22)
 [title]: <> (About me)
-[color]: <> (blue)
+[color]: <> (red)
 
 ![Daniel Ratmiroff](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.png)\
 

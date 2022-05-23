@@ -2,6 +2,7 @@
 import os
 import sys
 import datetime
+from unicodedata import category
 
 HEADER_TEMPLATE = """
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -62,7 +63,7 @@ TOC_END = """ </ul> """
 
 TOC_ITEM_TEMPLATE = """
 <li>
-    <span class="post-meta">{}</span>
+    <span class="post-meta">{} • </span> <span class="post-category {}">{}</span>
     <h3 style="margin-top:12px">
       <a class="post-link" href="{}">{}</a>
     </h3>
@@ -190,17 +191,23 @@ def get_printed_date(metadata):
     return year + ' ' + month + ' ' + day
 
 
+def get_printed_category(metadata):
+    year, month, day = metadata['date'].split('/')
+    month = 'JanFebMarAprMayJunJulAugSepOctNovDec'[int(month)*3-3:][:3]
+    return year + ' ' + month + ' ' + day
+
+
 def make_toc_item(global_config, metadata, root_path):
     link = metadata_to_path(global_config, metadata)
-    return TOC_ITEM_TEMPLATE.format(get_printed_date(metadata), root_path + '/' + link, metadata['title'])
+    category = list(metadata['categories'])[0]
+    return TOC_ITEM_TEMPLATE.format(get_printed_date(metadata), metadata['color'], category, root_path + '/' + link, metadata['title'])
 
 
 def make_toc(toc_items, global_config, all_categories, category=None):
+    title = global_config['title']
     if category:
-        title = category.capitalize()
         root_path = '..'
     else:
-        title = global_config['title']
         root_path = '.'
 
     return (
