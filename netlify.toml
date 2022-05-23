@@ -2,5 +2,5 @@
 # unless otherwise overridden by more specific contexts.
 
 [build]
-  command = "CI=false"
+  command = "rmdir -rf site && CI=false && python3 publish.py posts/*"
   publish = "site"
