@@ -3,5 +3,3 @@
 [posts_directory]: <> (general)
 [homepage_category]: <> (general)
 [domain]: <> (https://danielratmiroff.com/)
-[server]: <> (root@danielratmiroff.com)
-[website_root]: <> (/var/www/html)

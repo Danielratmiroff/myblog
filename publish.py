@@ -248,6 +248,7 @@ if __name__ == '__main__':
         os.system(
             'pandoc -o /tmp/temp_output.html {} {}'.format(file_location, options))
         root_path = '../../../..'
+
         total_file_contents = (
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
@@ -256,6 +257,8 @@ if __name__ == '__main__':
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
         )
+
+        print(total_file_contents)
 
         print("Path selected: {}".format(path))
 
@@ -298,6 +301,8 @@ if __name__ == '__main__':
         ]
         toc = make_toc(category_toc_items, global_config, categories, category)
         open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
+
+    print(make_toc(homepage_toc_items, global_config, categories))
 
     open('site/feed.xml', 'w').write(feed)
     open('site/index.html',
