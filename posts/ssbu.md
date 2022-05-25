@@ -11,20 +11,20 @@ I like video games and I'm a huge fan of Super Smash Bros, thus I decided to cre
 
 ### Overview
 
-With a simple UI design, you can search for a specific character to see their:
+With a simple UI, you can search for a specific character to see their:
 
 - General stats
 - Good against characters
 - Bad against characters
 
-I wanted to make the app appealing to my fellow super smash gamers, hence it had to have a good UI design; with that in mind, I made a couple of pictures meant to be used on the Google Store
+The app should be appealing to my fellow super smash gamers, therefore, it had to have a good UI design.
 
 &nbsp;
 
 **UI Design:**
 &nbsp;
 
-![Google Store](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/all.jpg)/
+![Google Store](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/all.jpg)\
 
 &nbsp;
 
