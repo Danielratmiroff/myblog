@@ -26,6 +26,4 @@ The app should be appealing to my fellow super smash gamers, therefore, it had t
 
 ![Google Store](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/all.jpg)\
 
-&nbsp;
-
 _Special thanks to [Erick Prieto](https://de.linkedin.com/in/erick-prieto-35aab5215) for his help and keen eye on the designs_
