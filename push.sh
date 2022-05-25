@@ -5,7 +5,7 @@
 # @Param #2: commit message
 
 BRANCH_PARAM="master"
-COMMENT="$2"
+COMMENT="$1"
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 COMMIT_COMMENT="${COMMENT:-"Progress"}"
@@ -20,7 +20,7 @@ Building project
 ./build.sh
 
 if [ "${BRANCH_PARAM}" = "--help" ]; then
-	echo "push.sh BranchName or \"\" (for current one) \"Commit-Message\""
+	echo "push.sh \"Commit-Message\""
 	exit 1
 else
 

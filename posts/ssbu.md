@@ -24,13 +24,14 @@ I wanted to make the app appealing to my fellow super smash gamers, hence it had
 **UI Design:**
 &nbsp;
 
-![Welcome](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/1.jpg)
-![Characters](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/2.jpg)
+![Google Store](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/all.jpg)
+
+<!-- ![Characters](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/2.jpg)
 ![Stats](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/3.jpg)
 ![Counters](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/4.jpg)
 ![Good against](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/5.jpg)
 ![Devices](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/6.jpg)
-![More Devices](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/7.jpg)
+![More Devices](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/7.jpg) -->
 
 &nbsp;
 
