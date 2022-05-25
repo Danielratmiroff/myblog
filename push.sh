@@ -23,8 +23,11 @@ if [ "${BRANCH_PARAM}" = "--help" ]; then
 	echo "push.sh BranchName or \"\" (for current one) \"Commit-Message\""
 	exit 1
 else
+
 	echo "
-Commiting changes... {"${COMMIT_COMMENT}"}
+----------------------------------------------
+Committing changes: "${COMMIT_COMMENT}" ...
+----------------------------------------------
 	"
 
 	git add .
