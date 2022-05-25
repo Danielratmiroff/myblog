@@ -42,7 +42,8 @@
 
 .post-category {
   display: inline-block;
-  font-size: 12px;
+  vertical-align: middle;
+  font-size: 10px;
   border-radius: 100px;
   padding: 0px 5px 2px;
 }
