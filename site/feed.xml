@@ -1,14 +1,23 @@
 <?xml version="1.0" ?>
 <rss version="2.0">
 <channel>
-  <title>Daniel Ratmiroff</title>
+  <title>Daniel Ratmiroff 🛸</title>
   <link>https://danielratmiroff.com//</link>
-  <description>Daniel Ratmiroff</description>
+  <description>Daniel Ratmiroff 🛸</description>
   <image>
       <url>https://danielratmiroff.com/images/logo.png</url>
-      <title>Daniel Ratmiroff</title>
+      <title>Daniel Ratmiroff 🛸</title>
       <link>https://danielratmiroff.com//</link>
   </image>
+
+<item>
+<title>Super Smash Companion</title>
+<link>https://danielratmiroff.com//general/2022/05/25/ssbu.html</link>
+<guid>https://danielratmiroff.com//general/2022/05/25/ssbu.html</guid>
+<pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+<description></description>
+</item>
+
 
 <item>
 <title>About me</title>

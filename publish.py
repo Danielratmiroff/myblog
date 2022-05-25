@@ -18,15 +18,18 @@ HEADER_TEMPLATE = """
 <style>
 @font-face {
     font-family: MJXc-TeX-math-Iw;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
 }
 @font-face {
     font-family: MJXZERO;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
 }
 @font-face {
     font-family: MJXTEX;
-    src: url("https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
 }
 .math { font-family: MJXc-TeX-math-Iw }
 </style>
@@ -55,7 +58,7 @@ TOC_TITLE_TEMPLATE = """
 <center><h1 style="border-bottom:0px"> {0} </h1></center>
 """
 
-FOOTER = """<p class="footer">site made with: <a href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a></p></div> """
+FOOTER = """<p class="footer">site made with: <a target="_blank" href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a> - credit to <a href="https://vitalik.ca/" target="_blank" alt"Vitalik's website">Vitalik Buterin</a></p></div> """
 
 TOC_START = """
 <br>
@@ -179,13 +182,17 @@ def defancify(text):
 
 
 def make_categories_header(categories, root_path):
-    o = ['<center><hr>']
-    for category in categories:
-        template = '<span class="toc-category" style="font-size:{}%"><a href="{}/categories/{}.html">{}</a></span>'
-        o.append(template.format(min(100, 1000 // len(category)),
-                 root_path, category, category.capitalize()))
-    o.append('<hr></center>')
-    return '\n'.join(o)
+    o = ['<center><div class="toc-category-container">']
+    for index, category in enumerate(categories, start=1):
+        template = '<span class="toc-category" style="font-size:95%"><a alt="{}" href="{}/categories/{}.html">{}</a></span>'
+        o.append(template.format(category, root_path,
+                 category, category.capitalize()))
+
+        if index != len(categories):
+            o.append(" • ")
+
+    o.append('</div></center>')
+    return '\n\n'.join(o)
 
 
 def get_printed_date(metadata):
@@ -200,10 +207,13 @@ def get_printed_category(metadata):
     return year + ' ' + month + ' ' + day
 
 
+# article preview
 def make_toc_item(global_config, metadata, root_path):
     link = metadata_to_path(global_config, metadata)
     category = list(metadata['categories'])[0]
     return TOC_ITEM_TEMPLATE.format(get_printed_date(metadata), metadata['color'], category, root_path + '/' + link, metadata['title'])
+
+# articles
 
 
 def make_toc(toc_items, global_config, all_categories, category=None):
@@ -290,16 +300,19 @@ if __name__ == '__main__':
     print("Building tables of contents...")
 
     homepage_toc_items = [
-        make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas if
-        global_config.get('homepage_category',
-                          '') in metadata['categories'].union({''})
+        make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas
     ]
 
     for category in categories:
-        category_toc_items = [
-            make_toc_item(global_config, metadata, '..') for metadata in sorted_metadatas if
-            category in metadata['categories']
-        ]
+        if category == global_config.get('homepage_category'):
+            category_toc_items = [make_toc_item(
+                global_config, metadata, '..') for metadata in sorted_metadatas]
+        else:
+            category_toc_items = [
+                make_toc_item(global_config, metadata, '..') for metadata in sorted_metadatas if
+                category in metadata['categories']
+            ]
+
         toc = make_toc(category_toc_items, global_config, categories, category)
         open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
 
@@ -310,9 +323,6 @@ if __name__ == '__main__':
     # Copy CSS and scripts files
     this_file_directory = os.path.dirname(__file__)
 
-    print(1)
-
-    print(this_file_directory)
     os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'css')))
     os.system('cp -r {} site/'.format(os.path.join(this_file_directory, 'scripts')))
     os.system('rsync -av images site/')
