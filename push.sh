@@ -11,12 +11,22 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 COMMIT_COMMENT="${COMMENT:-"Progress"}"
 BRANCH="${BRANCH_PARAM:-$CURRENT_BRANCH}"
 
+echo "
+----------------------------------------------
+Building project
+----------------------------------------------
+	"
+
 ./build.sh
 
 if [ "${BRANCH_PARAM}" = "--help" ]; then
 	echo "push.sh BranchName or \"\" (for current one) \"Commit-Message\""
 	exit 1
 else
+	echo "
+Commiting changes... {"${COMMIT_COMMENT}"}
+	"
+
 	git add .
 	git commit -m "${COMMIT_COMMENT}"
 
@@ -25,7 +35,6 @@ else
 Pushing to "${BRANCH}", with Commit: "${COMMIT_COMMENT}"
 ----------------------------------------------
 	"
-
 	git push origin ${BRANCH}
 	exit
 fi
