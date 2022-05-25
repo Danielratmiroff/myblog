@@ -26,7 +26,7 @@ else
 
 	echo "
 ----------------------------------------------
-Committing changes: "${COMMIT_COMMENT}" ...
+Committing changes: "${COMMIT_COMMENT}"
 ----------------------------------------------
 	"
 
