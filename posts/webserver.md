@@ -67,10 +67,9 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 – Select Debian as Web-Server option and disable Desktop functionality _(we only need web-server capabilities)_
 
 – Select "All files in one partition" _(this is recommended for new users)_
-
 &nbsp;
 
-** Debian homescreen**
+**Debian's Homescreen**
 
 ![Debian OS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg)\
 &nbsp;
@@ -135,7 +134,8 @@ _Credits to_ [_tecmint.com_](http://tecmint.com/) _for the image_
 Open the browser and navigate to [http://your-server-IP-address](http://your-server-ip-address/) (e.g. [http://192.173.43.21](http://192.173.43.21/))
 
 **Apache2's Home page**
-![Web Server Homepage](https://assets.digitalocean.com/how-to-install-lamp-debian-9/small_apache_default_debian9.png)\
+
+![Web Server Homepage](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/apachewebserver.jpg)\
 
 &nbsp;
 
@@ -152,11 +152,9 @@ Open the browser and navigate to [http://your-server-IP-address](http://your-ser
 
 I would like to ideally manage my server from a remote computer, thus let’s configure it to have secure SSH access.
 
-**SSH Key access**
+### SSH Key access
 
 It’s recommended to enter your server by using SSH Keys instead of passwords since it’s a more secure way to do so.
-
-&nbsp;
 
 **How to:**
 
@@ -184,9 +182,7 @@ It’s recommended to enter your server by using SSH Keys instead of passwords s
 
     ssh remote_username@your_server_ip_address
 
-&nbsp;
-
-**SSH access configuration:**
+### SSH access configuration
 
 Navigate to `/etc/ssh/sshd_config` and within the file:
 &nbsp;
@@ -229,7 +225,7 @@ Now, restart SSH service to apply our changes
 
 &nbsp;
 
-**Let's finally test our changes!**
+### Let's finally test our changes!
 
 #### SSH into your server using your keys
 

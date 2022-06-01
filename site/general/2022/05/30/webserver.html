@@ -86,9 +86,8 @@
 </ul>
 <p><strong>Recommendations for installing Debian:</strong></p>
 <p>– Select Debian as Web-Server option and disable Desktop functionality <em>(we only need web-server capabilities)</em></p>
-<p>– Select "All files in one partition" <em>(this is recommended for new users)</em></p>
-<p> </p>
-<p>** Debian homescreen**</p>
+<p>– Select "All files in one partition" <em>(this is recommended for new users)</em>  </p>
+<p><strong>Debian's Homescreen</strong></p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg" alt="Debian OS" /><br />
  </p>
 <blockquote>
@@ -126,7 +125,8 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <pre><code>hostname -I</code></pre>
 <h4 id="access-your-web-server"><strong>Access your web server!</strong></h4>
 <p>Open the browser and navigate to <a href="http://your-server-ip-address/">http://your-server-IP-address</a> (e.g. <a href="http://192.173.43.21/">http://192.173.43.21</a>)</p>
-<p><strong>Apache2's Home page</strong> <img src="https://assets.digitalocean.com/how-to-install-lamp-debian-9/small_apache_default_debian9.png" alt="Web Server Homepage" /><br />
+<p><strong>Apache2's Home page</strong></p>
+<p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/apachewebserver.jpg" alt="Web Server Homepage" /><br />
 </p>
 <p> </p>
 <blockquote>
@@ -139,9 +139,8 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <li>Create public keys to ssh into our server  </li>
 </ul>
 <p>I would like to ideally manage my server from a remote computer, thus let's configure it to have secure SSH access.</p>
-<p><strong>SSH Key access</strong></p>
+<h3 id="ssh-key-access">SSH Key access</h3>
 <p>It's recommended to enter your server by using SSH Keys instead of passwords since it's a more secure way to do so.</p>
-<p> </p>
 <p><strong>How to:</strong></p>
 <h4 id="switch-to-your-local-user-profile-that-will-be-accessing-the-server">Switch to your local user profile that will be accessing the server</h4>
 <pre><code>su username</code></pre>
@@ -155,8 +154,7 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <pre><code>ssh-copy-id -i ~/.ssh/id_rsa.pub remote_username@your_server_ip_address</code></pre>
 <h4 id="validate-that-the-key-was-added-successfully">Validate that the key was added successfully</h4>
 <pre><code>ssh remote_username@your_server_ip_address</code></pre>
-<p> </p>
-<p><strong>SSH access configuration:</strong></p>
+<h3 id="ssh-access-configuration">SSH access configuration</h3>
 <p>Navigate to <code>/etc/ssh/sshd_config</code> and within the file:  </p>
 <h4 id="change-22-port">Change 22 Port</h4>
 <p>Change port 22 to any non-default port: e.g. <code>Port 20155</code>  </p>
@@ -174,7 +172,7 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <h4 id="restart-ssh-by-running">Restart ssh by running:</h4>
 <pre><code>systemctl restart ssh</code></pre>
 <p> </p>
-<p><strong>Let's finally test our changes!</strong></p>
+<h3 id="lets-finally-test-our-changes">Let's finally test our changes!</h3>
 <h4 id="ssh-into-your-server-using-your-keys">SSH into your server using your keys</h4>
 <pre><code>ssh remote_username@your_server_ip_address -p your_server_port_number</code></pre>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/login.jpg" alt="Log in into server" /><br />
