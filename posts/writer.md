@@ -1,6 +1,6 @@
 [category]: <> (side projects)
 [date]: <> (2022/05/27)
-[title]: <> (Easy Write)
+[title]: <> (Easy-write)
 [color]: <> (green)
 
 I made this small project to have a place where I could access all basic functionality I needed to write my University papers comfortably ✍️.

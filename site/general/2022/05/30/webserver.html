@@ -1,0 +1,188 @@
+
+<head>
+<link rel="alternate" type="application/rss+xml" href="../../../../feed.xml" title="Build your own web server">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../../../../css/common-vendor.b8ecfc406ac0b5f77a26.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/font-vendor.b86e2bf451b246b1a88e.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/fretboard.f32f2a8d5293869f0195.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/pretty.0ae3265014f89d9850bf.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/pretty-vendor.83ac49e057c3eac4fce3.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/misc.css">
+<script type="text/javascript" id="MathJax-script" async
+  src="/scripts/mathjax.js">
+</script>
+<style>
+@font-face {
+    font-family: MJXc-TeX-math-Iw;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+@font-face {
+    font-family: MJXZERO;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+@font-face {
+    font-family: MJXTEX;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+.math { font-family: MJXc-TeX-math-Iw }
+</style>
+</head>
+<div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Build your own web server" />
+<meta name="twitter:image" content="https://danielratmiroff.com/images/logo.png" />
+
+<br>
+<h1 style="margin-bottom:7px"> Build your own web server </h1>
+<small style="float:left; color: #888"> 2022 May 30 </small>
+<small style="float:right; color: #888"><a href="../../../../index.html">See all posts</a></small>
+<br> <br> <br>
+<title> Build your own web server </title>
+<p>In this article we are going to build a Web-Server based on <strong>Debian</strong> (Linux) OS, using <strong>Apache2</strong>. We will also configure and secure the <strong>SSH access</strong>, so that we can securely access our server from a remote desktop.</p>
+<p>I'm not gonna explain why you'd like to build an on-premise web server <em>(Privacy! 🔔)</em>. You can of course always <a href="https://letmegooglethat.com/?q=why+on+premise+web+server">google it</a>!</p>
+<h3 id="lets-get-right-into-the-how-to-build-it-️">Let's get right into the how-to build it 🏗️!</h3>
+<p> </p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Have a dedicated machine <em>(old laptop, raspberry pi, cloud instance, etc)</em></li>
+<li>A Pendrive <em>(to boot and install the new OS)</em></li>
+</ul>
+<p><strong>Steps:</strong></p>
+<ol type="1">
+<li>Set up the operating system <em>(Linux)</em></li>
+<li>Install and configure the webserver <em>(Apache)</em></li>
+<li>Configure secure ssh access to your server  </li>
+</ol>
+<h2 id="set-up-the-operating-system">Set up the operating system</h2>
+<h3 id="overview"><strong>Overview</strong></h3>
+<ul>
+<li>Get iso image from the desired OS</li>
+<li>Burn image into Pendrive</li>
+<li>Boot system from the Pendrive</li>
+<li>Install new OS</li>
+</ul>
+<p>You can use any Linux distro of preference for the OS, In this case I'll use <strong>Debian</strong>. It's well suited for web servers and it's relatively easy to get started with.</p>
+<p>Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo.  </p>
+<p><strong>Start:</strong></p>
+<ul>
+<li><p>Download the <strong>Debian ISO image</strong> from the Debian official site: <a href="https://www.debian.org/CD/http-ftp/">Debian .iso</a>.</p></li>
+<li><p>Let's <strong>burn the ISO image into the Pendrive</strong>. You can use <a href="https://www.pendrivelinux.com/">pendrivelinux.com</a> to do this.<br />
+<embed src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp" /><br />
+</p>
+<p>I'm using Ubuntu, thus I'll also add the steps on how to do it from Ubuntu itself: <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview">bootable-usb-from-ubuntu</a>.</p></li>
+<li><p><strong>Boot from our Pendrive</strong>; First we need to enter BIOS setup.</p>
+<p>– Restart your computer</p>
+<p>– While the startup screen is loading, to enter BIOS; Press ESC, F8, F9, or Option (depending on the manufacturer)</p>
+<p>– Navigate to "Boot" menu using the arrow keys and select your USB Disk as the Boot Option #1</p>
+<p>– Press F10 to save and quit</p>
+<p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg" alt="BIOS" /><br />
+ </p>
+<p>Now your computer is booting from USB and you'll go through the <strong>Debian installation process</strong></p>
+<p> </p></li>
+</ul>
+<p><strong>Recommendations for installing Debian:</strong></p>
+<p>– Select Debian as Web-Server option and disable Desktop functionality <em>(we only need web-server capabilities)</em></p>
+<p>– Select "All files in one partition" <em>(this is recommended for new users)</em></p>
+<p> </p>
+<p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg" alt="Debian OS" /><br />
+</p>
+<blockquote>
+<p><strong>Congrats!</strong> You have now Debian OS up and running 🏃🏃‍♀️!  </p>
+</blockquote>
+<h2 id="install-and-configure-the-webserver">Install and configure the webserver</h2>
+<h3 id="overview-1"><strong>Overview</strong></h3>
+<ul>
+<li>Update system repositories</li>
+<li>Install Apache2</li>
+<li>Configure webserver</li>
+<li>Test web server</li>
+</ul>
+<p> </p>
+<p><strong>On your terminal,</strong></p>
+<h4 id="lets-start-by-updating-the-packages.">Let's start by updating the packages.</h4>
+<pre><code>sudo apt update</code></pre>
+<p>–– <em>If your account doesn't have sudo rights, switch to the root user by running <code>su -</code></em></p>
+<h4 id="install-apache2-by-running">Install Apache2 by running</h4>
+<pre><code>sudo apt install apache2</code></pre>
+<h4 id="verify-installation-by-running">Verify installation by running</h4>
+<pre><code>apache2 -version</code></pre>
+<h4 id="configure-the-firewall-settings-if-its-running-in-your-system">Configure the Firewall settings (if it's running in your system)</h4>
+<pre><code>sudo ufw allow 80/tcp # (default network port used to send and receive unencrypted web pages)
+
+sudo ufw allow 443/tcp # (network port used to make secured and encrypted data - HTTPS)</code></pre>
+<h4 id="verify-port-settings">Verify port settings</h4>
+<pre><code>sudo ufw status</code></pre>
+<h4 id="verify-apache2-is-active-by-running">Verify Apache2 is active by running:</h4>
+<pre><code>sudo systemctl status apache2</code></pre>
+<p><em>The response should similar to:</em> <img src="https://www.tecmint.com/wp-content/uploads/2019/08/Check-Apache-Status.png" alt="Check Apache Status" /><br />
+<em>Credits to</em> <a href="http://tecmint.com/"><em>tecmint.com</em></a> <em>for the image</em></p>
+<p>If the server is not running, you can start it by running:</p>
+<pre><code>sudo systemctl start apache2 **or** sudo systemctl restart apache2</code></pre>
+<p> </p>
+<h4 id="get-your-server-ip-address-hostname-by-running">Get your server IP address <em>(hostname)</em> by running:</h4>
+<pre><code>hostname -I</code></pre>
+<h4 id="access-your-web-server"><strong>Access your web server!</strong></h4>
+<p>Open the browser and navigate to <a href="http://your-server-ip-address/">http://your-server-IP-address</a> (e.g. <a href="http://192.173.43.21/">http://192.173.43.21</a>)</p>
+<p> </p>
+<blockquote>
+<p><strong>Congrats!</strong> You now have your own web server ✨!  </p>
+</blockquote>
+<h2 id="secure-ssh-access-to-manage-your-server">#3 - Secure SSH access to manage your server</h2>
+<h3 id="overview-2"><strong>Overview</strong></h3>
+<ul>
+<li>Configure login access</li>
+<li>Create public keys to ssh into our server  </li>
+</ul>
+<p>I would like to ideally manage my server from a remote computer, thus let's configure it to have secure SSH access.</p>
+<p><strong>SSH Key access</strong></p>
+<p>It's recommended to enter your server by using SSH Keys instead of passwords since it's a more secure way to do so.</p>
+<p> </p>
+<p><strong>How to:</strong></p>
+<h4 id="switch-to-your-local-user-profile-that-will-be-accessing-the-server">Switch to your local user profile that will be accessing the server</h4>
+<pre><code>su username</code></pre>
+<p>— <em>It's best practice neither to use root nor admin users</em></p>
+<h4 id="generate-a-new-key-pair">Generate a new key pair</h4>
+<pre><code>ssh-keygen -t rsa</code></pre>
+<p>— <em>It's recommended to add a catchphrase when generating the key since it adds an extra layer of security</em></p>
+<h4 id="check-that-the-public-key-was-created-successfully">Check that the public key was created successfully</h4>
+<pre><code>ls ~/.ssh/id_*</code></pre>
+<h4 id="copy-the-key-to-your-remote-server">Copy the key to your remote server</h4>
+<pre><code>ssh-copy-id -i ~/.ssh/id_rsa.pub remote_username@your_server_ip_address</code></pre>
+<h4 id="validate-that-the-key-was-added-successfully">Validate that the key was added successfully</h4>
+<pre><code>ssh remote_username@your_server_ip_address</code></pre>
+<p> </p>
+<h4 id="ssh-access-configuration">SSH access configuration:</h4>
+<p>Navigate to <code>/etc/ssh/sshd_config</code> and within the file:  </p>
+<h4 id="change-22-port">Change 22 Port</h4>
+<p>— Change port 22 to any non-default port: e.g. <code>Port 20155</code>  </p>
+<h4 id="disable-root-logins">Disable Root logins</h4>
+<p>— Set <code>#PermitRootLogin</code> as <code>noPermitRootLogin no</code>  </p>
+<h4 id="disable-empty-passwords">Disable empty passwords</h4>
+<p>— Set <code>#PermitEmptyPasswords</code> as <code>PermitEmptyPasswords no</code>  </p>
+<h4 id="enable-protocol-2">Enable Protocol 2</h4>
+<p>— Add the line <code>Protocol 2</code> to the file.  </p>
+<h4 id="limit-for-password-attends">Limit for password attends</h4>
+<p>— Set <code>#MaxAuthTries</code> to <code>MaxAuthTries 3</code></p>
+<h4 id="or-disable-password-authentication-altogether-important---please-make-sure-you-already-have-ssh-key-access-before-disabling-it">or Disable password authentication altogether <em>(Important -– Please make sure you already have SSH Key access before disabling it)</em></h4>
+<p>— Set <code>#PasswordAuthentication</code> as <code>PasswordAuthentication no</code></p>
+<p> </p>
+<p>Now, restart SSH service to apply our changes</p>
+<h4 id="restart-ssh-by-running">Restart ssh by running:</h4>
+<pre><code>systemctl restart ssh</code></pre>
+<p> </p>
+<p><strong>Let's finally test our changes!</strong></p>
+<h4 id="ssh-into-your-server-using-your-keys">SSH into your server using your keys</h4>
+<pre><code>ssh remote_username@your_server_ip_address -p your_server_port_number</code></pre>
+<p> </p>
+<p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/login.jpg" alt="Log in into server" /><br />
+</p>
+<p> </p>
+<blockquote>
+<p><strong>Woohoo!</strong> You can now SSH into your server 🔥 !</p>
+</blockquote>
+<p class="footer">site made with: <a target="_blank" href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a> - credit to <a href="https://vitalik.ca/" target="_blank" alt"Vitalik's website">Vitalik Buterin</a></p></div> 
