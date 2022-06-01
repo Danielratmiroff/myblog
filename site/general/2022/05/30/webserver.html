@@ -71,8 +71,8 @@
 <p><strong>Start:</strong></p>
 <ul>
 <li><p>Download the <strong>Debian ISO image</strong> from the Debian official site: <a href="https://www.debian.org/CD/http-ftp/">Debian .iso</a>.</p></li>
-<li><p>Let's <strong>burn the ISO image into the Pendrive</strong>. You can use <a href="https://www.pendrivelinux.com/">pendrivelinux.com</a> to do this.<br />
-<embed src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp" /><br />
+<li><p>Let's <strong>burn the ISO image into the Pendrive</strong>. You can use <a href="https://www.pendrivelinux.com/">pendrivelinux.com</a> to do this.</p>
+<p><embed src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp" /><br />
 </p>
 <p>I'm using Ubuntu, thus I'll also add the steps on how to do it from Ubuntu itself: <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview">bootable-usb-from-ubuntu</a>.</p></li>
 <li><p><strong>Boot from our Pendrive</strong>; First we need to enter BIOS setup.</p>
@@ -81,16 +81,16 @@
 <p>– Navigate to "Boot" menu using the arrow keys and select your USB Disk as the Boot Option #1</p>
 <p>– Press F10 to save and quit</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg" alt="BIOS" /><br />
- </p>
-<p>Now your computer is booting from USB and you'll go through the <strong>Debian installation process</strong></p>
-<p> </p></li>
+ </p></li>
+<li><p>Once your computer boots from USB, you'll go through the <strong>Debian installation process</strong></p></li>
 </ul>
 <p><strong>Recommendations for installing Debian:</strong></p>
 <p>– Select Debian as Web-Server option and disable Desktop functionality <em>(we only need web-server capabilities)</em></p>
 <p>– Select "All files in one partition" <em>(this is recommended for new users)</em></p>
 <p> </p>
+<p>** Debian homescreen**</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg" alt="Debian OS" /><br />
-</p>
+ </p>
 <blockquote>
 <p><strong>Congrats!</strong> You have now Debian OS up and running 🏃🏃‍♀️!  </p>
 </blockquote>
@@ -100,9 +100,8 @@
 <li>Update system repositories</li>
 <li>Install Apache2</li>
 <li>Configure webserver</li>
-<li>Test web server</li>
+<li>Test web server  </li>
 </ul>
-<p> </p>
 <p><strong>On your terminal,</strong></p>
 <h4 id="lets-start-by-updating-the-packages.">Let's start by updating the packages.</h4>
 <pre><code>sudo apt update</code></pre>
@@ -121,13 +120,14 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <pre><code>sudo systemctl status apache2</code></pre>
 <p><em>The response should similar to:</em> <img src="https://www.tecmint.com/wp-content/uploads/2019/08/Check-Apache-Status.png" alt="Check Apache Status" /><br />
 <em>Credits to</em> <a href="http://tecmint.com/"><em>tecmint.com</em></a> <em>for the image</em></p>
-<p>If the server is not running, you can start it by running:</p>
+<p>— <em>If the server is not running, you can start it by running:</em></p>
 <pre><code>sudo systemctl start apache2 **or** sudo systemctl restart apache2</code></pre>
-<p> </p>
 <h4 id="get-your-server-ip-address-hostname-by-running">Get your server IP address <em>(hostname)</em> by running:</h4>
 <pre><code>hostname -I</code></pre>
 <h4 id="access-your-web-server"><strong>Access your web server!</strong></h4>
 <p>Open the browser and navigate to <a href="http://your-server-ip-address/">http://your-server-IP-address</a> (e.g. <a href="http://192.173.43.21/">http://192.173.43.21</a>)</p>
+<p><strong>Apache2's Home page</strong> <img src="https://assets.digitalocean.com/how-to-install-lamp-debian-9/small_apache_default_debian9.png" alt="Web Server Homepage" /><br />
+</p>
 <p> </p>
 <blockquote>
 <p><strong>Congrats!</strong> You now have your own web server ✨!  </p>
@@ -156,20 +156,19 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <h4 id="validate-that-the-key-was-added-successfully">Validate that the key was added successfully</h4>
 <pre><code>ssh remote_username@your_server_ip_address</code></pre>
 <p> </p>
-<h4 id="ssh-access-configuration">SSH access configuration:</h4>
+<p><strong>SSH access configuration:</strong></p>
 <p>Navigate to <code>/etc/ssh/sshd_config</code> and within the file:  </p>
 <h4 id="change-22-port">Change 22 Port</h4>
-<p>— Change port 22 to any non-default port: e.g. <code>Port 20155</code>  </p>
+<p>Change port 22 to any non-default port: e.g. <code>Port 20155</code>  </p>
 <h4 id="disable-root-logins">Disable Root logins</h4>
-<p>— Set <code>#PermitRootLogin</code> as <code>noPermitRootLogin no</code>  </p>
+<p>Set <code>#PermitRootLogin</code> as <code>noPermitRootLogin no</code>  </p>
 <h4 id="disable-empty-passwords">Disable empty passwords</h4>
-<p>— Set <code>#PermitEmptyPasswords</code> as <code>PermitEmptyPasswords no</code>  </p>
+<p>Set <code>#PermitEmptyPasswords</code> as <code>PermitEmptyPasswords no</code>  </p>
 <h4 id="enable-protocol-2">Enable Protocol 2</h4>
-<p>— Add the line <code>Protocol 2</code> to the file.  </p>
+<p>Add the line <code>Protocol 2</code> to the file.  </p>
 <h4 id="limit-for-password-attends">Limit for password attends</h4>
-<p>— Set <code>#MaxAuthTries</code> to <code>MaxAuthTries 3</code></p>
-<h4 id="or-disable-password-authentication-altogether-important---please-make-sure-you-already-have-ssh-key-access-before-disabling-it">or Disable password authentication altogether <em>(Important -– Please make sure you already have SSH Key access before disabling it)</em></h4>
-<p>— Set <code>#PasswordAuthentication</code> as <code>PasswordAuthentication no</code></p>
+<p>Set <code>#MaxAuthTries</code> to <code>MaxAuthTries 3</code></p>
+<p><em>or Disable password authentication altogether</em> <em>(Important -– Please make sure you already have SSH Key access before disabling it)</em> — Set <code>#PasswordAuthentication</code> as <code>PasswordAuthentication no</code></p>
 <p> </p>
 <p>Now, restart SSH service to apply our changes</p>
 <h4 id="restart-ssh-by-running">Restart ssh by running:</h4>
@@ -178,7 +177,6 @@ sudo ufw allow 443/tcp # (network port used to make secured and encrypted data -
 <p><strong>Let's finally test our changes!</strong></p>
 <h4 id="ssh-into-your-server-using-your-keys">SSH into your server using your keys</h4>
 <pre><code>ssh remote_username@your_server_ip_address -p your_server_port_number</code></pre>
-<p> </p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/login.jpg" alt="Log in into server" /><br />
 </p>
 <p> </p>

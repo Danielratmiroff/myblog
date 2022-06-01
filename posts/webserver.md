@@ -41,7 +41,8 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 
 - Download the **Debian ISO image** from the Debian official site: [Debian .iso](https://www.debian.org/CD/http-ftp/).
 
-- Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this.  
+- Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this.
+
   ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)\
 
   I’m using Ubuntu, thus I’ll also add the steps on how to do it from Ubuntu itself: [bootable-usb-from-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview).
@@ -59,9 +60,7 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
   ![BIOS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg)\
   &nbsp;
 
-  Now your computer is booting from USB and you’ll go through the **Debian installation process**
-
-  &nbsp;
+- Once your computer boots from USB, you’ll go through the **Debian installation process**
 
 **Recommendations for installing Debian:**
 
@@ -71,7 +70,10 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 
 &nbsp;
 
+** Debian homescreen**
+
 ![Debian OS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg)\
+&nbsp;
 
 > **Congrats!** You have now Debian OS up and running 🏃🏃‍♀️!
 > &nbsp;
@@ -84,8 +86,7 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 - Install Apache2
 - Configure webserver
 - Test web server
-
-&nbsp;
+  &nbsp;
 
 **On your terminal,**
 
@@ -121,11 +122,9 @@ _The response should similar to:_
 ![Check Apache Status](https://www.tecmint.com/wp-content/uploads/2019/08/Check-Apache-Status.png)\
 _Credits to_ [_tecmint.com_](http://tecmint.com/) _for the image_
 
-If the server is not running, you can start it by running:
+--- _If the server is not running, you can start it by running:_
 
     sudo systemctl start apache2 **or** sudo systemctl restart apache2
-
-&nbsp;
 
 #### Get your server IP address _(hostname)_ by running:
 
@@ -134,6 +133,9 @@ If the server is not running, you can start it by running:
 #### **Access your web server!**
 
 Open the browser and navigate to [http://your-server-IP-address](http://your-server-ip-address/) (e.g. [http://192.173.43.21](http://192.173.43.21/))
+
+**Apache2's Home page**
+![Web Server Homepage](https://assets.digitalocean.com/how-to-install-lamp-debian-9/small_apache_default_debian9.png)\
 
 &nbsp;
 
@@ -184,37 +186,37 @@ It’s recommended to enter your server by using SSH Keys instead of passwords s
 
 &nbsp;
 
-#### SSH access configuration:
+**SSH access configuration:**
 
 Navigate to `/etc/ssh/sshd_config` and within the file:
 &nbsp;
 
 #### Change 22 Port
 
-— Change port 22 to any non-default port: e.g. `Port 20155`
+Change port 22 to any non-default port: e.g. `Port 20155`
 &nbsp;
 
 #### Disable Root logins
 
-— Set `#PermitRootLogin` as `noPermitRootLogin no`
+Set `#PermitRootLogin` as `noPermitRootLogin no`
 &nbsp;
 
 #### Disable empty passwords
 
-— Set `#PermitEmptyPasswords` as `PermitEmptyPasswords no`
+Set `#PermitEmptyPasswords` as `PermitEmptyPasswords no`
 &nbsp;
 
 #### Enable Protocol 2
 
-— Add the line `Protocol 2` to the file.
+Add the line `Protocol 2` to the file.
 &nbsp;
 
 #### Limit for password attends
 
-— Set `#MaxAuthTries` to `MaxAuthTries 3`
+Set `#MaxAuthTries` to `MaxAuthTries 3`
 
-#### or Disable password authentication altogether _(Important -– Please make sure you already have SSH Key access before disabling it)_
-
+_or Disable password authentication altogether_
+_(Important -– Please make sure you already have SSH Key access before disabling it)_
 — Set `#PasswordAuthentication` as `PasswordAuthentication no`
 
 &nbsp;
@@ -232,8 +234,6 @@ Now, restart SSH service to apply our changes
 #### SSH into your server using your keys
 
     ssh remote_username@your_server_ip_address -p your_server_port_number
-
-&nbsp;
 
 ![Log in into server](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/login.jpg)\
 
