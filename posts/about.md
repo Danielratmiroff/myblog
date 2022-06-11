@@ -6,7 +6,7 @@
 ![Daniel Ratmiroff](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.png)\
 &nbsp;
 
-I'm a software engineer that takes great pleasure in making other people's live easier. 👋🤖
+I'm a software engineer that takes great pleasure in making other people's lives easier. 👋🤖
 
 &nbsp;
 
