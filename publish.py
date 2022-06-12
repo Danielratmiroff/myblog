@@ -6,11 +6,11 @@ from unicodedata import category
 
 HEADER_TEMPLATE = """
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
-<link rel="stylesheet" type="text/css" href="$root/css/font-vendor.b86e2bf451b246b1a88e.css">
-<link rel="stylesheet" type="text/css" href="$root/css/fretboard.f32f2a8d5293869f0195.css">
-<link rel="stylesheet" type="text/css" href="$root/css/pretty.0ae3265014f89d9850bf.css">
-<link rel="stylesheet" type="text/css" href="$root/css/pretty-vendor.83ac49e057c3eac4fce3.css">
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Danielratmiroff/css-files/master/yt-podcasts/common-vendor.b8ecfc406ac0b5f77a26.css?token=GHSAT0AAAAAABUR77W2PNEVYYR2F7LKWDDOYVFTRXA">
+		<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Danielratmiroff/css-files/master/yt-podcasts/fretboard.f32f2a8d5293869f0195.css?token=GHSAT0AAAAAABUR77W3QX47AX3KA46FBV6UYVFTSNA">
+		<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Danielratmiroff/css-files/master/yt-podcasts/pretty-vendor.83ac49e057c3eac4fce3.css?token=GHSAT0AAAAAABUR77W2M4KJT6A3PBXML2OIYVFTSRQ">
+		<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Danielratmiroff/css-files/master/yt-podcasts/pretty.0ae3265014f89d9850bf.css?token=GHSAT0AAAAAABUR77W37Q36GAIHXI3H5EQOYVFTSVQ">
 <link rel="stylesheet" type="text/css" href="$root/css/misc.css">
 <script type="text/javascript" id="MathJax-script" async
   src="/scripts/mathjax.js">
