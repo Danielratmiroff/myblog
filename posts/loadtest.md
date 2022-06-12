@@ -8,10 +8,13 @@
 Quoting wikipedia:
 
 > Load testing generally refers to **the practice of modeling the expected usage of a software program by simulating multiple users accessing the program concurrently**. As such, this testing > is most relevant for multi-user systems; often one built using a client/server model, such as web servers.
+&nbsp;
 
 ## Let's get started! 🏁
+&nbsp;
 
 **Installing requirements**
+
 We are gonna load test our server using [locust](https://locust.io/), a simple and straight forward python library.
 &nbsp;
 
@@ -21,10 +24,8 @@ pip3 install locust
 ``` 
 *If you don't have python or pip3 installed, please checkout the following links:*
 
-> How to install python: (installation guide)[https://www.python.org/downloads/]
-
-> How to install pip3: (installation guide)[https://pip.pypa.io/en/stable/installation/]
-
+- How to install python: (installation guide)[https://www.python.org/downloads/]
+- How to install pip3: (installation guide)[https://pip.pypa.io/en/stable/installation/]
 &nbsp;
 
 Test the installation:
@@ -32,7 +33,8 @@ Test the installation:
 locust -V
 ``` 
 
-## Load testing
+## Load testing 
+
 Create a python file `locustfile.py` and add the following code in it:
 
 
@@ -45,11 +47,12 @@ def  hello_world(self):
     self.client.get("/") #URL that we will request
 ```
 
-In the same folder, run:
+In the same folder, **start testing by running**:
 
 ``` bash
 locust
 ```
+&nbsp;
 
 You should see something similar to: 
 
@@ -65,18 +68,19 @@ Now, you can access **[http://localhost:8089/](http://localhost:8089/)** */ in y
 
 &nbsp;
 
-### Testing
+## Testing
+
+You will be able to see the stats of your ongoing test:
+
 ![Testing Preview](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/testing.jpg)\
 &nbsp;
 
-One you stop the ongoing test, you can analise your results using the different views that locust offers:
-
-*e.g. Charts*
+One you stop testing, you can analise your results using the different views that locust offers:
 
 ![Charts](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/charts.jpg)\
 &nbsp;
 
-or you can simply use the terminal view 
+or you can simply preview the terminal view 
 
 ![Terminal view](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/result-terminal.jpg)\
 &nbsp;
@@ -88,6 +92,7 @@ or you can simply use the terminal view
 ---
 
 ## One step further, a more realistic test
+&nbsp;
 
 Make a more realistic and suitable test by modifying the `locustfile` to your needs
 &nbsp;
@@ -128,7 +133,7 @@ except KeyError:
 
 &nbsp;
 
-With locust you can test your server fairly quickly with its simple setup 
+With locust you can test your server fairly quickly with its simple setup.
 
 Its configuration is also well docummented, take a look at their official site: 
 [Locust documentation](https://docs.locust.io/en/stable/writing-a-locustfile.html)

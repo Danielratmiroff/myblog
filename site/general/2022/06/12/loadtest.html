@@ -46,20 +46,19 @@
 <p><strong>What is load testing?</strong> ⁉️</p>
 <p>Quoting wikipedia:</p>
 <blockquote>
-<p>Load testing generally refers to <strong>the practice of modeling the expected usage of a software program by simulating multiple users accessing the program concurrently</strong>. As such, this testing &gt; is most relevant for multi-user systems; often one built using a client/server model, such as web servers.</p>
+<p>Load testing generally refers to <strong>the practice of modeling the expected usage of a software program by simulating multiple users accessing the program concurrently</strong>. As such, this testing &gt; is most relevant for multi-user systems; often one built using a client/server model, such as web servers.  </p>
 </blockquote>
 <h2 id="lets-get-started">Let's get started! 🏁</h2>
-<p><strong>Installing requirements</strong> We are gonna load test our server using <a href="https://locust.io/">locust</a>, a simple and straight forward python library.  </p>
+<p> </p>
+<p><strong>Installing requirements</strong></p>
+<p>We are gonna load test our server using <a href="https://locust.io/">locust</a>, a simple and straight forward python library.  </p>
 <p>Install locust by running:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">pip3</span> install locust</a></code></pre></div>
 <p><em>If you don't have python or pip3 installed, please checkout the following links:</em></p>
-<blockquote>
-<p>How to install python: (installation guide)[https://www.python.org/downloads/]</p>
-</blockquote>
-<blockquote>
-<p>How to install pip3: (installation guide)[https://pip.pypa.io/en/stable/installation/]</p>
-</blockquote>
-<p> </p>
+<ul>
+<li>How to install python: (installation guide)[https://www.python.org/downloads/]</li>
+<li>How to install pip3: (installation guide)[https://pip.pypa.io/en/stable/installation/]  </li>
+</ul>
 <p>Test the installation:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">locust</span> -V</a></code></pre></div>
 <h2 id="load-testing">Load testing</h2>
@@ -70,8 +69,9 @@
 <a class="sourceLine" id="cb3-4" title="4"><span class="at">@task</span></a>
 <a class="sourceLine" id="cb3-5" title="5"><span class="kw">def</span>  hello_world(<span class="va">self</span>):</a>
 <a class="sourceLine" id="cb3-6" title="6">    <span class="va">self</span>.client.get(<span class="st">&quot;/&quot;</span>) <span class="co">#URL that we will request</span></a></code></pre></div>
-<p>In the same folder, run:</p>
+<p>In the same folder, <strong>start testing by running</strong>:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">locust</span></a></code></pre></div>
+<p> </p>
 <p>You should see something similar to:</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/terminal-start.jpg" alt="Terminal" /><br />
  </p>
@@ -82,14 +82,14 @@
 <p>Configure according your preferred settings and off you go! 🏎️</p>
 </blockquote>
 <p> </p>
-<h3 id="testing">Testing</h3>
+<h2 id="testing">Testing</h2>
+<p>You will be able to see the stats of your ongoing test:</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/testing.jpg" alt="Testing Preview" /><br />
  </p>
-<p>One you stop the ongoing test, you can analise your results using the different views that locust offers:</p>
-<p><em>e.g. Charts</em></p>
+<p>One you stop testing, you can analise your results using the different views that locust offers:</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/charts.jpg" alt="Charts" /><br />
  </p>
-<p>or you can simply use the terminal view</p>
+<p>or you can simply preview the terminal view</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/result-terminal.jpg" alt="Terminal view" /><br />
  </p>
 <blockquote>
@@ -98,6 +98,7 @@
 <p> </p>
 <hr />
 <h2 id="one-step-further-a-more-realistic-test">One step further, a more realistic test</h2>
+<p> </p>
 <p>Make a more realistic and suitable test by modifying the <code>locustfile</code> to your needs  </p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="im">import</span> time</a>
 <a class="sourceLine" id="cb5-2" title="2"><span class="im">from</span> json <span class="im">import</span> JSONDecodeError</a>
@@ -131,7 +132,7 @@
 <a class="sourceLine" id="cb5-30" title="30"><span class="cf">except</span> <span class="pp">KeyError</span>:</a>
 <a class="sourceLine" id="cb5-31" title="31">    response.failure(<span class="st">&quot;Response did not contain expected key &#39;greeting&#39;&quot;</span>)</a></code></pre></div>
 <p> </p>
-<p>With locust you can test your server fairly quickly with its simple setup</p>
+<p>With locust you can test your server fairly quickly with its simple setup.</p>
 <p>Its configuration is also well docummented, take a look at their official site: <a href="https://docs.locust.io/en/stable/writing-a-locustfile.html">Locust documentation</a>  </p>
 <blockquote>
 <p>Happy load testing! 🛩️</p>
