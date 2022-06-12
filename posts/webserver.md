@@ -1,4 +1,4 @@
-[category]: <> (devops)
+[category]: <> (guides)
 [date]: <> (2022/05/30)
 [title]: <> (Build your own web server)
 [color]: <> (purple)
