@@ -3,7 +3,7 @@
 [title]: <> (About me)
 [color]: <> (blue)
 
-![Daniel Ratmiroff](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/daniel.png)\
+![Daniel Ratmiroff](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/daniel.png)\
 &nbsp;
 
 I'm a software engineer that takes great pleasure in making other people's lives easier. 👋🤖
@@ -31,7 +31,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![Ultra Tendency logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ut.png)\
+![Ultra Tendency logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/ut.png)\
 
 > **Big Data Developer / Frontend**
 >
@@ -41,7 +41,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![Ninox Software logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ninox.png)\
+![Ninox Software logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/ninox.png)\
 
 > **UX Developer**
 >
@@ -51,7 +51,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![Derco logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/derco.png)\
+![Derco logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/derco.png)\
 
 > **Brand | Web Developer**
 >
@@ -61,7 +61,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![La Media Social logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/lamedia.png)\
+![La Media Social logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/lamedia.png)\
 
 > **Lead of Web Projects**
 >
@@ -71,7 +71,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![La Media Social logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/lamedia.png)\
+![La Media Social logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/lamedia.png)\
 
 > **Web Developer**
 >
@@ -83,7 +83,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 ## Education
 
-![The Open University logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ou.png)\
+![The Open University logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/ou.png)\
 
 > **The Open University**
 >
@@ -93,7 +93,7 @@ I'm a software engineer that takes great pleasure in making other people's lives
 
 &nbsp;
 
-![Instituto de Diseño Darias logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/darias.png)\
+![Instituto de Diseño Darias logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/darias.png)\
 
 > **Institute of Design Darias**
 >
