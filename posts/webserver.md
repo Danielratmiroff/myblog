@@ -42,15 +42,18 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 - Download the **Debian ISO image** from the Debian official site: [Debian .iso](https://www.debian.org/CD/http-ftp/).
 - Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this.
 
-  ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)
+  ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)\
 
   I’m using Ubuntu, thus I’ll also add the steps on how to do it from Ubuntu itself: [bootable-usb-from-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview).
 
 - **Boot from our Pendrive**; First we need to enter BIOS setup.
 
   – Restart your computer
+
   – While the startup screen is loading, to enter BIOS; Press ESC, F8, F9, or Option (depending on the manufacturer)
+
   – Navigate to “Boot” menu using the arrow keys and select your USB Disk as the Boot Option #1
+
   – Press F10 to save and quit
 
 ![BIOS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg)\
