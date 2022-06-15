@@ -1,5 +1,5 @@
 [category]: <> (side projects)
-[date]: <> (2022/15/6)
+[date]: <> (2022/06/15)
 [title]: <> (favourite youtube podcasts)
 [color]: <> (green)
 
