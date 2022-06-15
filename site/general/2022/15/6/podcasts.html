@@ -1,0 +1,76 @@
+
+<head>
+<link rel="alternate" type="application/rss+xml" href="../../../../feed.xml" title="favourite youtube podcasts">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" type="text/css" href="https://css-storage.s3.eu-central-1.amazonaws.com/common-vendor.b8ecfc406ac0b5f77a26.css">
+<link rel="stylesheet" type="text/css" href="https://css-storage.s3.eu-central-1.amazonaws.com/fretboard.f32f2a8d5293869f0195.css">
+<link rel="stylesheet" type="text/css" href="https://css-storage.s3.eu-central-1.amazonaws.com/pretty-vendor.83ac49e057c3eac4fce3.css">
+<link rel="stylesheet" type="text/css" href="https://css-storage.s3.eu-central-1.amazonaws.com/pretty.0ae3265014f89d9850bf.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/misc.css">
+<script type="text/javascript" id="MathJax-script" async
+  src="/scripts/mathjax.js">
+</script>
+<style>
+@font-face {
+    font-family: MJXc-TeX-math-Iw;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+@font-face {
+    font-family: MJXZERO;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+@font-face {
+    font-family: MJXTEX;
+    src: url(
+        "https://assets.hackmd.io/build/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff")
+}
+.math { font-family: MJXc-TeX-math-Iw }
+</style>
+</head>
+<div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="favourite youtube podcasts" />
+<meta name="twitter:image" content="https://danielratmiroff.com/images/logo.png" />
+
+<br>
+<h1 style="margin-bottom:7px"> favourite youtube podcasts </h1>
+<small style="float:left; color: #888"> 2022  6 </small>
+<small style="float:right; color: #888"><a href="../../../../index.html">See all posts</a></small>
+<br> <br> <br>
+<title> favourite youtube podcasts </title>
+<h2 id="fetch-your-favourite-podcasts">Fetch your favourite podcasts</h2>
+<figure>
+<img src="https://github.com/Danielratmiroff/yt-podcasts/actions/workflows/main.yml/badge.svg" alt="Build Status" /><figcaption>Build Status</figcaption>
+</figure>
+<p>While searching for podcasts in youtube, I get distracted by all of its rich features.</p>
+<p>To addressed this problem, I created this simple website that fetchs uniquely my favourite podcasts.</p>
+<p><a href="https://github.com/Danielratmiroff/yt-podcasts">Github 🔗</a></p>
+<h4 id="currently-supported-podcasts">Currently supported podcasts:</h4>
+<ul>
+<li><a href="https://www.youtube.com/c/lexfridman">Lex Fridman Podcast 🔗</a></li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol type="1">
+<li>Clone the project into a local folder</li>
+<li>Create a Youtube API Key - <a href="https://developers.google.com/youtube/registering_an_application">How to create API key</a></li>
+<li>Set you Youtube API Key as a OS environmental variable</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> nano ~/.bashrc</a></code></pre></div>
+<p>Add in the file:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="bu">export</span> <span class="va">YOUTUBE_API_KEY=</span>YOUR_API_KEY_HERE</a></code></pre></div>
+<ol start="4" type="1">
+<li>Run it using run-locally.sh</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sh</span> run-locally.sh</a></code></pre></div>
+<ol start="5" type="1">
+<li>Access <a href="http://localhost:9000/">http://localhost:9000</a></li>
+</ol>
+<h3 id="ui-design">UI Design:</h3>
+<p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/podcasts/screenshot.jpg" alt="Screenshot" /><br />
+</p>
+<p class="footer">site made with: <a target="_blank" href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a> - credit to <a href="https://vitalik.ca/" target="_blank" alt"Vitalik's website">Vitalik Buterin</a></p></div> 
