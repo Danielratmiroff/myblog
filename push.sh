@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Script to commit & push current branch with a default message if none is provided
 # @Param #1: new branch name
 # @Param #2: commit message

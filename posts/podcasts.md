@@ -1,6 +1,6 @@
 [category]: <> (side projects)
 [date]: <> (2022/06/15)
-[title]: <> (favourite youtube podcasts)
+[title]: <> (Favourite youtube podcasts)
 [color]: <> (green)
 
 ## Fetch your favourite podcasts
@@ -11,11 +11,11 @@ While searching for podcasts in youtube, I get distracted by all of its rich fea
 
 To addressed this problem, I created this simple website that fetchs uniquely my favourite podcasts.
 
-[Github 🔗](https://github.com/Danielratmiroff/yt-podcasts)
+[Github 🌐](https://github.com/Danielratmiroff/yt-podcasts)
 
 #### Currently supported podcasts:
 
-- [Lex Fridman Podcast 🔗](https://www.youtube.com/c/lexfridman)
+- [Lex Fridman Podcast 🌐](https://www.youtube.com/c/lexfridman)
 
 ## Usage
 
