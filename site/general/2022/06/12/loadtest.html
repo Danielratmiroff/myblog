@@ -46,18 +46,16 @@
 <p><strong>What is load testing?</strong> ⁉️</p>
 <p>Quoting wikipedia:</p>
 <blockquote>
-<p>Load testing generally refers to <strong>the practice of modeling the expected usage of a software program by simulating multiple users accessing the program concurrently</strong>. As such, this testing &gt; is most relevant for multi-user systems; often one built using a client/server model, such as web servers.  </p>
+<p>Load testing generally refers to <strong>the practice of modeling the expected usage of a software program by simulating multiple users accessing the program concurrently</strong>.  </p>
 </blockquote>
-<h2 id="lets-get-started">Let's get started! 🏁</h2>
-<p> </p>
-<p><strong>Installing requirements</strong></p>
-<p>We are gonna load test our server using <a href="https://locust.io/">locust</a>, a simple and straight forward python library.  </p>
+<h2 id="lets-get-started-then">Let's get started then! 🏁</h2>
+<p><strong>Requirements</strong></p>
+<p>We are gonna load test our server using <a href="https://locust.io/">Locust</a>, a simple and straight forward python library.  </p>
 <p>Install locust by running:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">pip3</span> install locust</a></code></pre></div>
-<p><em>If you don't have python or pip3 installed, please checkout the following links:</em></p>
 <ul>
-<li>How to install python: (installation guide)[https://www.python.org/downloads/]</li>
-<li>How to install pip3: (installation guide)[https://pip.pypa.io/en/stable/installation/]  </li>
+<li><a href="https://www.python.org/downloads/">How to install python</a></li>
+<li><a href="https://pip.pypa.io/en/stable/installation/">How to install pip3</a></li>
 </ul>
 <p>Test the installation:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">locust</span> -V</a></code></pre></div>
@@ -75,7 +73,8 @@
 <p>You should see something similar to:</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/terminal-start.jpg" alt="Terminal" /><br />
  </p>
-<p>Now, you can access <strong><a href="http://localhost:8089/">http://localhost:8089/</a></strong> */ in your web-browser and you will see the locust UI</p>
+<p>Now, you can access <a href="http://localhost:8089/">http://localhost:8089</a></p>
+<p>You will now see Locust UI</p>
 <p><img src="https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/loadtest/locust.jpg" alt="Localhost UI" /><br />
  </p>
 <blockquote>
@@ -107,19 +106,19 @@
 <a class="sourceLine" id="cb5-5" title="5"><span class="kw">class</span> QuickstartUser(HttpUser):</a>
 <a class="sourceLine" id="cb5-6" title="6"></a>
 <a class="sourceLine" id="cb5-7" title="7"><span class="co"># Waiting time after between each task ran by users</span></a>
-<a class="sourceLine" id="cb5-8" title="8">wait_time <span class="op">=</span> between(<span class="dv">1</span>, <span class="dv">5</span>) </a>
+<a class="sourceLine" id="cb5-8" title="8">wait_time <span class="op">=</span> between(<span class="dv">1</span>, <span class="dv">5</span>)</a>
 <a class="sourceLine" id="cb5-9" title="9"></a>
 <a class="sourceLine" id="cb5-10" title="10"><span class="at">@task</span></a>
 <a class="sourceLine" id="cb5-11" title="11"><span class="kw">def</span> hello_world(<span class="va">self</span>):</a>
 <a class="sourceLine" id="cb5-12" title="12">    <span class="va">self</span>.client.get(<span class="st">&quot;/hello&quot;</span>)</a>
 <a class="sourceLine" id="cb5-13" title="13">    <span class="va">self</span>.client.get(<span class="st">&quot;/world&quot;</span>)</a>
-<a class="sourceLine" id="cb5-14" title="14">    </a>
+<a class="sourceLine" id="cb5-14" title="14"></a>
 <a class="sourceLine" id="cb5-15" title="15"><span class="co"># &quot;3&quot; refers to the task&#39;s weight (it&#39;s 3 times more likely to be ran)</span></a>
-<a class="sourceLine" id="cb5-16" title="16"><span class="at">@task</span>(<span class="dv">3</span>) </a>
+<a class="sourceLine" id="cb5-16" title="16"><span class="at">@task</span>(<span class="dv">3</span>)</a>
 <a class="sourceLine" id="cb5-17" title="17"><span class="kw">def</span> view_items(<span class="va">self</span>):</a>
 <a class="sourceLine" id="cb5-18" title="18">    <span class="cf">for</span> item_id <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
 <a class="sourceLine" id="cb5-19" title="19">        <span class="co"># group requests with different parameters together</span></a>
-<a class="sourceLine" id="cb5-20" title="20">        <span class="va">self</span>.client.get(<span class="ss">f&quot;/item?id=</span><span class="sc">{</span>item_id<span class="sc">}</span><span class="ss">&quot;</span>, name<span class="op">=</span><span class="st">&quot;/item&quot;</span>) </a>
+<a class="sourceLine" id="cb5-20" title="20">        <span class="va">self</span>.client.get(<span class="ss">f&quot;/item?id=</span><span class="sc">{</span>item_id<span class="sc">}</span><span class="ss">&quot;</span>, name<span class="op">=</span><span class="st">&quot;/item&quot;</span>)</a>
 <a class="sourceLine" id="cb5-21" title="21">        time.sleep(<span class="dv">1</span>)</a>
 <a class="sourceLine" id="cb5-22" title="22"></a>
 <a class="sourceLine" id="cb5-23" title="23"><span class="co"># call an API and validate its response</span></a>

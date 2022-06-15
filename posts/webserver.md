@@ -40,36 +40,29 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 **Start:**
 
 - Download the **Debian ISO image** from the Debian official site: [Debian .iso](https://www.debian.org/CD/http-ftp/).
-
 - Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this.
 
-  ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)\
+  ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)
 
   I’m using Ubuntu, thus I’ll also add the steps on how to do it from Ubuntu itself: [bootable-usb-from-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview).
 
 - **Boot from our Pendrive**; First we need to enter BIOS setup.
 
   – Restart your computer
-
   – While the startup screen is loading, to enter BIOS; Press ESC, F8, F9, or Option (depending on the manufacturer)
-
   – Navigate to “Boot” menu using the arrow keys and select your USB Disk as the Boot Option #1
-
   – Press F10 to save and quit
 
-  ![BIOS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg)\
-  &nbsp;
+![BIOS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/bios.jpg)\
 
-- Once your computer boots from USB, you’ll go through the **Debian installation process**
+Once your computer boots from USB, you’ll go through the **Debian installation process**
+
+&nbsp;
 
 **Recommendations for installing Debian:**
 
-– Select Debian as Web-Server option and disable Desktop functionality _(we only need web-server capabilities)_
-
-– Select "All files in one partition" _(this is recommended for new users)_
-&nbsp;
-
-**Debian's Homescreen**
+- Select Debian as Web-Server option and disable Desktop functionality _(we only need web-server capabilities)_
+- Select "All files in one partition" _(this is recommended for new users)_
 
 ![Debian OS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg)\
 &nbsp;
@@ -86,8 +79,6 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 - Configure webserver
 - Test web server
   &nbsp;
-
-**On your terminal,**
 
 #### Let’s start by updating the packages.
 
@@ -121,7 +112,7 @@ _The response should similar to:_
 ![Check Apache Status](https://www.tecmint.com/wp-content/uploads/2019/08/Check-Apache-Status.png)\
 _Credits to_ [_tecmint.com_](http://tecmint.com/) _for the image_
 
---- _If the server is not running, you can start it by running:_
+_If the server is not running, you can start it by running:_
 
     sudo systemctl start apache2 **or** sudo systemctl restart apache2
 
@@ -129,11 +120,9 @@ _Credits to_ [_tecmint.com_](http://tecmint.com/) _for the image_
 
     hostname -I
 
-#### **Access your web server!**
+#### **Access your web server! 👌**
 
 Open the browser and navigate to [http://your-server-IP-address](http://your-server-ip-address/) (e.g. [http://192.173.43.21](http://192.173.43.21/))
-
-**Apache2's Home page**
 
 ![Web Server Homepage](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/apachewebserver.jpg)\
 
@@ -152,7 +141,7 @@ Open the browser and navigate to [http://your-server-IP-address](http://your-ser
 
 I would like to ideally manage my server from a remote computer, thus let’s configure it to have secure SSH access.
 
-### SSH Key access
+## SSH Key access
 
 It’s recommended to enter your server by using SSH Keys instead of passwords since it’s a more secure way to do so.
 
@@ -182,7 +171,7 @@ It’s recommended to enter your server by using SSH Keys instead of passwords s
 
     ssh remote_username@your_server_ip_address
 
-### SSH access configuration
+## SSH access configuration
 
 Navigate to `/etc/ssh/sshd_config` and within the file:
 &nbsp;
@@ -214,18 +203,13 @@ Set `#MaxAuthTries` to `MaxAuthTries 3`
 _or Disable password authentication altogether_
 _(Important -– Please make sure you already have SSH Key access before disabling it)_
 — Set `#PasswordAuthentication` as `PasswordAuthentication no`
-
 &nbsp;
 
-Now, restart SSH service to apply our changes
-
-#### Restart ssh by running:
+#### Now, restart SSH service to apply our changes
 
     systemctl restart ssh
 
-&nbsp;
-
-### Let's finally test our changes!
+## Let's finally test our changes!
 
 #### SSH into your server using your keys
 
