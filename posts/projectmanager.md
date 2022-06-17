@@ -29,12 +29,18 @@ It needed to have a nice UI, since I wanted to have a pleasent experience while 
 
 ![Dashboard](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/dashboard.jpg)\
 
-![Documents](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/documents.jpg)\
+---
 
 ![Documents](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/documents.jpg)\
+
+---
 
 ![Calendar](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/calendar.jpg)\
 
+---
+
 ![New task](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/newtask.jpg)\
+
+---
 
 ![New meeting](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/newmeeting.jpg)\
