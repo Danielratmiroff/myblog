@@ -1,21 +1,21 @@
 [category]: <> (side projects)
 [date]: <> (2022/06/15)
-[title]: <> (Favourite youtube podcasts)
+[title]: <> (Youtube podcasts)
 [color]: <> (green)
 
 ## Fetch your favourite podcasts
 
-![Build Status](https://github.com/Danielratmiroff/yt-podcasts/actions/workflows/main.yml/badge.svg)
+[Build Status](https://github.com/Danielratmiroff/yt-podcasts/actions/workflows/main.yml/badge.svg)
 
 While searching for podcasts in youtube, I get distracted by all of its rich features.
 
 To addressed this problem, I created this simple website that fetchs uniquely my favourite podcasts.
 
-[Github 🌐](https://github.com/Danielratmiroff/yt-podcasts)
+[Github](https://github.com/Danielratmiroff/yt-podcasts)![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 #### Currently supported podcasts:
 
-- [Lex Fridman Podcast 🌐](https://www.youtube.com/c/lexfridman)
+- [Lex Fridman Podcast](https://www.youtube.com/c/lexfridman)![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ## Usage
 

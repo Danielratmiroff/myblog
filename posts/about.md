@@ -8,28 +8,23 @@
 
 I'm a software engineer that takes great pleasure in making other people's lives easier. 👋🤖
 
-&nbsp;
+#### My interests:
 
-**My interests:**
-
-- Frontend / UX
+- Software engineering
 - Automation
 - IoT
 - DevOps
 
-**Besides IT, I enjoy:**
+#### Besides IT, I enjoy:
 
 - Space
 - Teaching
-- Spending time w/ my dog
+- Spending time with my dog
+- Nature
 - Sports
 - Video games
 
-&nbsp;
-
 ## Experience
-
-&nbsp;
 
 ![Ultra Tendency logo](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/about/ut.png)\
 
@@ -78,8 +73,6 @@ I'm a software engineer that takes great pleasure in making other people's lives
 > La Media Social Agency
 >
 > _2015 - 6 mos • Caracas, Venezuela_
-
-&nbsp;
 
 ## Education
 

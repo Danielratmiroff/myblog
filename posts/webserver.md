@@ -7,9 +7,7 @@ In this article we are going to build a Web-Server based on **Debian** (Linux) O
 
 I’m not gonna explain why you’d like to build an on-premise web server _(Privacy! 🔔)_. You can of course always [google it](https://letmegooglethat.com/?q=why+on+premise+web+server)!
 
-### Let’s get right into the how-to build it 🏗️!
-
-&nbsp;
+#### Let’s get right into the how-to build it 🏗️!
 
 **Requirements:**
 
@@ -21,11 +19,10 @@ I’m not gonna explain why you’d like to build an on-premise web server _(Pri
 1.  Set up the operating system _(Linux)_
 2.  Install and configure the webserver _(Apache)_
 3.  Configure secure ssh access to your server
-    &nbsp;
 
 ## Set up the operating system
 
-### **Overview**
+### Overview
 
 - Get iso image from the desired OS
 - Burn image into Pendrive
@@ -35,12 +32,11 @@ I’m not gonna explain why you’d like to build an on-premise web server _(Pri
 You can use any Linux distro of preference for the OS, In this case I’ll use **Debian**. It’s well suited for web servers and it’s relatively easy to get started with.
 
 Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo.
-&nbsp;
 
-**Start:**
+#### Start:
 
-- Download the **Debian ISO image** from the Debian official site: [Debian .iso](https://www.debian.org/CD/http-ftp/).
-- Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this.
+- Download the **Debian ISO image** from the Debian official site: [Debian .iso](https://www.debian.org/CD/http-ftp/)
+- Let’s **burn the ISO image into the Pendrive**. You can use [pendrivelinux.com](https://www.pendrivelinux.com/) to do this
 
   ![Pendrive ISO burner](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/boot-from-usb.webp)\
 
@@ -60,54 +56,49 @@ Similar options can be Ubuntu, Linux Mint, or for more experienced people Gentoo
 
 Once your computer boots from USB, you’ll go through the **Debian installation process**
 
-&nbsp;
-
-**Recommendations for installing Debian:**
+#### Recommendations for installing Debian:
 
 - Select Debian as Web-Server option and disable Desktop functionality _(we only need web-server capabilities)_
 - Select "All files in one partition" _(this is recommended for new users)_
 
 ![Debian OS](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/debian11.jpg)\
-&nbsp;
 
 > **Congrats!** You have now Debian OS up and running 🏃🏃‍♀️!
-> &nbsp;
 
 ## Install and configure the webserver
 
-### **Overview**
+### Overview
 
 - Update system repositories
 - Install Apache2
 - Configure webserver
 - Test web server
-  &nbsp;
 
-#### Let’s start by updating the packages.
+##### Let’s start by updating the packages.
 
     sudo apt update
 
 --– _If your account doesn’t have sudo rights, switch to the root user by running `su -`_
 
-#### Install Apache2 by running
+##### Install Apache2 by running
 
     sudo apt install apache2
 
-#### Verify installation by running
+##### Verify installation by running
 
     apache2 -version
 
-#### Configure the Firewall settings (if it’s running in your system)
+##### Configure the Firewall settings (if it’s running in your system)
 
     sudo ufw allow 80/tcp # (default network port used to send and receive unencrypted web pages)
 
     sudo ufw allow 443/tcp # (network port used to make secured and encrypted data - HTTPS)
 
-#### Verify port settings
+##### Verify port settings
 
     sudo ufw status
 
-#### Verify Apache2 is active by running:
+##### Verify Apache2 is active by running:
 
     sudo systemctl status apache2
 
@@ -119,28 +110,24 @@ _If the server is not running, you can start it by running:_
 
     sudo systemctl start apache2 **or** sudo systemctl restart apache2
 
-#### Get your server IP address _(hostname)_ by running:
+##### Get your server IP address _(hostname)_ by running:
 
     hostname -I
 
-#### **Access your web server! 👌**
+### Access your web server! 👌
 
 Open the browser and navigate to [http://your-server-IP-address](http://your-server-ip-address/) (e.g. [http://192.173.43.21](http://192.173.43.21/))
 
 ![Web Server Homepage](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/apachewebserver.jpg)\
 
-&nbsp;
-
 > **Congrats!** You now have your own web server ✨!
-> &nbsp;
 
 ## #3 - Secure SSH access to manage your server
 
-### **Overview**
+### Overview
 
 - Configure login access
 - Create public keys to ssh into our server
-  &nbsp;
 
 I would like to ideally manage my server from a remote computer, thus let’s configure it to have secure SSH access.
 
@@ -148,78 +135,70 @@ I would like to ideally manage my server from a remote computer, thus let’s co
 
 It’s recommended to enter your server by using SSH Keys instead of passwords since it’s a more secure way to do so.
 
-**How to:**
+#### How to:
 
-#### Switch to your local user profile that will be accessing the server
+##### Switch to your local user profile that will be accessing the server
 
     su username
 
 — _It’s best practice neither to use root nor admin users_
 
-#### Generate a new key pair
+##### Generate a new key pair
 
     ssh-keygen -t rsa
 
 — _It’s recommended to add a catchphrase when generating the key since it adds an extra layer of security_
 
-#### Check that the public key was created successfully
+##### Check that the public key was created successfully
 
     ls ~/.ssh/id_*
 
-#### Copy the key to your remote server
+##### Copy the key to your remote server
 
     ssh-copy-id -i ~/.ssh/id_rsa.pub remote_username@your_server_ip_address
 
-#### Validate that the key was added successfully
+##### Validate that the key was added successfully
 
     ssh remote_username@your_server_ip_address
 
 ## SSH access configuration
 
 Navigate to `/etc/ssh/sshd_config` and within the file:
-&nbsp;
 
-#### Change 22 Port
+##### Change 22 Port
 
 Change port 22 to any non-default port: e.g. `Port 20155`
-&nbsp;
 
-#### Disable Root logins
+##### Disable Root logins
 
 Set `#PermitRootLogin` as `noPermitRootLogin no`
-&nbsp;
 
-#### Disable empty passwords
+##### Disable empty passwords
 
 Set `#PermitEmptyPasswords` as `PermitEmptyPasswords no`
-&nbsp;
 
-#### Enable Protocol 2
+##### Enable Protocol 2
 
 Add the line `Protocol 2` to the file.
-&nbsp;
 
-#### Limit for password attends
+##### Limit for password attends
 
 Set `#MaxAuthTries` to `MaxAuthTries 3`
 
 _or Disable password authentication altogether_
 _(Important -– Please make sure you already have SSH Key access before disabling it)_
 — Set `#PasswordAuthentication` as `PasswordAuthentication no`
-&nbsp;
 
-#### Now, restart SSH service to apply our changes
+##### Now, restart SSH service to apply our changes
 
     systemctl restart ssh
 
 ## Let's finally test our changes!
 
-#### SSH into your server using your keys
+##### SSH into your server using your keys
 
     ssh remote_username@your_server_ip_address -p your_server_port_number
 
 ![Log in into server](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/webserver/login.jpg)\
-
-&nbsp;
 
 > **Woohoo!** You can now SSH into your server 🔥 !
