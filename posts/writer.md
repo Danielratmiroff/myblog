@@ -5,9 +5,9 @@
 
 I made this small project to have a place where I could access all basic functionality I needed to write my University papers comfortably ✍️.
 
-[Easy Write App](https://danielratmiroff.github.io/writingassistant.github.io//)![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Easy Write App](https://danielratmiroff.github.io/writingassistant.github.io//) ![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
-[Github](https://github.com/Danielratmiroff/writingassistant.github.io)![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Github](https://github.com/Danielratmiroff/writingassistant.github.io) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ### Overview
 

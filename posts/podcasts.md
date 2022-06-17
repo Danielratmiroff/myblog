@@ -11,11 +11,11 @@ While searching for podcasts in youtube, I get distracted by all of its rich fea
 
 To addressed this problem, I created this simple website that fetchs uniquely my favourite podcasts.
 
-[Github](https://github.com/Danielratmiroff/yt-podcasts)![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Github](https://github.com/Danielratmiroff/yt-podcasts) ![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 #### Currently supported podcasts:
 
-- [Lex Fridman Podcast](https://www.youtube.com/c/lexfridman)![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+- [Lex Fridman Podcast](https://www.youtube.com/c/lexfridman) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ## Usage
 

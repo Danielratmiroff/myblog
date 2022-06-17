@@ -10,9 +10,9 @@ document stuff, (class notes, new insights, etc) while
 also keeping track of my classes, meetings and upcoming deadlines;
 One important aspect, is that it should be private (I decided to use Local-storage instead of any cloud service)
 
-[Project Manager App](https://danielratmiroff.github.io/project-management/#/)![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Project Manager App](https://danielratmiroff.github.io/project-management/#/) ![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
-[Github](https://danielratmiroff.github.io/project-management/)![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Github](https://danielratmiroff.github.io/project-management/) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ### Overview
 
