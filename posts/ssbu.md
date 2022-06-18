@@ -22,5 +22,4 @@ The app should be appealing to my fellow super smash gamers, therefore, it had t
 ## UI Design:
 
 ![Google Store](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/ssbu/all.jpg)\
-
 _Special thanks to [Erick Prieto](https://erickprieto.com/) for his help and keen eye on the designs_
