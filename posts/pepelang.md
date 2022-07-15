@@ -3,8 +3,6 @@
 [title]: <> (Pepelang!)
 [color]: <> (green)
 
-# Pepelang!
-
 ![version](https://img.shields.io/badge/version-0.3-green)
 ![coverage](https://img.shields.io/badge/coverage-85-yellowgreen)
 ![coolness](https://img.shields.io/badge/coolness-99-blue)
