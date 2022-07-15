@@ -5,7 +5,7 @@
 
 ![version](https://img.shields.io/badge/version-0.3-green)
 ![coverage](https://img.shields.io/badge/coverage-85-yellowgreen)
-![coolness](https://img.shields.io/badge/coolness-99-blue)
+![coolness](https://img.shields.io/badge/coolness-99-orange)
 
 #### What is Pepelang?
 
@@ -13,6 +13,7 @@
 - Easy to learn and get started with (if you know spanish)
 - Built-in sequential execution (get your concurrency out of here! who needs speed anyways?)
 - Open for PRs and improvements!
+- [Find it in Github](https://github.com/Danielratmiroff/pepelang)
 
 ## Project
 
