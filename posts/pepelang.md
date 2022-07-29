@@ -13,7 +13,6 @@
 - Easy to learn and get started with _(if you know spanish)_
 - Built-in sequential execution _(get your concurrency out of here! who needs speed anyways?)_
 - Open for PRs and improvements!
-- [Find it in Github](https://github.com/Danielratmiroff/pepelang)
 
 ## Project
 
@@ -48,24 +47,25 @@ _"hello world"_
 
 ### Install
 
-Clone the repository into your local machine
+You'll need to [install Go](https://go.dev/doc/install)
 
-`git clone https://github.com/Danielratmiroff/pepelang.git`
+```
+git clone https://github.com/Danielratmiroff/pepelang.git
+cd pepe
+go install
+```
 
-In the project's main folder, built it by running
+### Usage
 
-`go build -o .`
+Call pepe in your terminal
 
-Run it with:
+```
+$ pepe
+```
 
-`./pepe`
-_or just execute the ".exe" if you're in windows_
+If you want, you can also add an alias for this with echo "alias pp='pepe'" >> ~/.zshrc (or whichever rc file you're using).
 
-**Linux**:
-
-Add `pp` into your variable's path (_.bashrc or .zshrc_)
-
-`export PATH=$PATH:$HOME/PATH_TO_PROJECT/pepe`
+**Please note: If you get an error claiming that lazygit cannot be found or is not defined, you may need to add ~/go/bin to your $PATH (MacOS/Linux), or %HOME%\go\bin (Windows). Not to be mistaken for C:\Go\bin (which is for Go's own binaries, not apps like pepe).**
 
 ## Features & Syntax
 
