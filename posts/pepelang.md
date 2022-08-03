@@ -29,7 +29,7 @@ It parses the source code in a Read-Eval-Print-Loop (REPL) environment and It ha
 
 Pepelang's code looks like this:
 
-```
+```bash
 var hola = fn() {
    retornar "hello world";
 }
@@ -49,7 +49,7 @@ _"hello world"_
 
 You'll need to [install Go](https://go.dev/doc/install)
 
-```
+```bash
 git clone https://github.com/Danielratmiroff/pepelang.git
 cd pepe
 go install
@@ -63,7 +63,7 @@ Call pepe in your terminal
 $ pepe
 ```
 
-You can also cal a pepe program:
+You can also call a pepe program:
 
 ```
 $ pepe youProgram.pp
@@ -71,7 +71,7 @@ $ pepe youProgram.pp
 
 If you want, you can also add an alias for this with echo "alias pp='pepe'" >> ~/.zshrc (or whichever rc file you're using).
 
-**Please note: If you get an error claiming that lazygit cannot be found or is not defined, you may need to add ~/go/bin to your $PATH (MacOS/Linux), or %HOME%\go\bin (Windows). Not to be mistaken for C:\Go\bin (which is for Go's own binaries, not apps like pepe).**
+**Please note: If you get an error claiming that pepe cannot be found or is not defined, you may need to add ~/go/bin to your $PATH (MacOS/Linux), or %HOME%\go\bin (Windows). Not to be mistaken for C:\Go\bin (which is for Go's own binaries, not apps like pepe).**
 
 ## Features & Syntax
 
@@ -89,13 +89,13 @@ Run it with:
 
 Declared with the `var` keyword, can have either a string, number, boolean, array, dictionary or function value
 
-```
+```bash
 var hola = "mundo"
 ```
 
 ### Booleans:
 
-```
+```bash
 verdad (true) or falso (false)
 ```
 
@@ -108,17 +108,17 @@ verdad (true) or falso (false)
 - not operator (!)
 - single operands (++) (--)
 
-```
+```bash
 >> 4 + 2
 6
 ```
 
-```
+```bash
 >> !verdad
 falso
 ```
 
-```
+```bash
 >> var foo = 68
 >> foo++
 69
@@ -128,19 +128,19 @@ falso
 
 Indexes are treated as expressions, thus, all of the following are valid:
 
-```
+```bash
 >> var lista = ["hola", 2, "mundo", 4]
 >> lista[3]
 "mundo"
 ```
 
-```
+```bash
 >> var lista = [6 < 9 , 4 + 2]
 >> lista[1]
 6
 ```
 
-```
+```bash
 >> var lista = [!verdad, !falso]
 >> lista[0]
 falso
@@ -150,7 +150,7 @@ falso
 
 Keys are literal values and values are parsed as expressions
 
-```
+```bash
 >> var miDic = { "nombre": "daniel", "edad": 69};
 >> miDic["nombre"];
 daniel
@@ -162,7 +162,7 @@ daniel
 
 Declared using the `si # (if)` and `sino # (else)`, can take any expression value and evaluate the code accordingly
 
-```
+```bash
 >> si ( 1 < 2 ) {
 retonar verdad
 }
@@ -170,7 +170,7 @@ retonar verdad
 verdad
 ```
 
-```
+```bash
 >> si ( 42 == 69 ) {
 retonar verdad
 } sino {
@@ -191,13 +191,13 @@ Declared using the `retonar` keyword (as in previous example)
 - Can take any number of parameters and such are treated as expressions.
 - Support closure
 
-```
+```bash
 >> var suma = fn(a, b) { a + b; };
 >> suma(2, 2)
 4
 ```
 
-```
+```bash
 var sumaTotal = fn(f, x) {
 	 retornar sumaDos(sumaDos(x));
 };
@@ -213,12 +213,12 @@ sumaTotal(sumaDos, 2); // => 6
 - **Tam:**
   Returns the length on a given value. Supported by strings, integers and arrays
 
-```
+```bash
 >> tam("Hello world")
 12
 ```
 
-```
+```bash
 >> var lista = [1, 2, 3]
 >> tam(lista)
 2
@@ -227,7 +227,7 @@ sumaTotal(sumaDos, 2); // => 6
 - **Pon:**
   Prints a value into the console
 
-```
+```bash
 >> pon("Imprime este mensaje!")
 imprime este mensaje!
 ```
@@ -238,7 +238,7 @@ imprime este mensaje!
 - **Ultimo:**
   Gets the last element of a given array
 
-```
+```bash
 >> var lista = [1, 2, 3]
 >> primero(lista)
 1
@@ -249,7 +249,7 @@ imprime este mensaje!
 - **Rest:**
   Removes the first element of a given array
 
-```
+```bash
 >> var lista = [1, 2, 3]
 >> rest(lista)
 [2, 3]
@@ -258,7 +258,7 @@ imprime este mensaje!
 - **Empuja:**
   Inserts an element at the end of the array
 
-```
+```bash
 >> empuja(lista, "42")
 [2, 3, "42"]
 ```
