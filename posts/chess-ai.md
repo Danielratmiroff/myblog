@@ -224,9 +224,9 @@ function calculateBestMove(depthLvl: number): [Move, number] {
 
 There is a thing called [The horizon effect](https://www.chessprogramming.org/Horizon_Effect), which is caused by limited depth of the search algorithm. You can further reduce it by adding _quiescence search_.
 
-## More humane AI 📢
+## More humane AI 🔊
 
-To soft things off, I added audio to the AI, so it now not only it does kick my ass but it does vocalize it as well.
+To soft things off, I added some voice audios to the AI, to make the ass whooping more fun!
 
 ```typescript
 type  playAudioParams  =  {
