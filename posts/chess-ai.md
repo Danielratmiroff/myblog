@@ -8,15 +8,15 @@
 
 I built an AI that plays chess and it kicked my ass
 
-[Play ](https://chess-ai-danielratmiroff.vercel.app/) ![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+[Play a game](https://chess-ai-danielratmiroff.vercel.app/) ![Visit App](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 [Source code](https://github.com/Danielratmiroff/chess-ai) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ## What does it do?
 
 - Plays "good" moves
-- Beats other player
-- Speaks when beating other player
+- Beats the other player
+- Talks when beating the other player
 
 ## How?
 
