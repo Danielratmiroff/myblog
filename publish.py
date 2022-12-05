@@ -60,7 +60,7 @@ TOC_TITLE_TEMPLATE = """
 <center><h1 style="border-bottom:0px"> {0} </h1></center>
 """
 
-FOOTER = """<p class="footer">site made with: <a target="_blank" href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a> - credit to <a href="https://vitalik.ca/" target="_blank" alt"Vitalik's website">Vitalik Buterin</a></p></div> """
+FOOTER = """<p class="footer">Daniel Ratmiroff © - site made with: <a target="_blank" href="https://github.com/vbuterin/blogmaker" alt="blog maker">blogmaker</a> - credit to <a href="https://vitalik.ca/" target="_blank" alt"Vitalik's website">Vitalik Buterin</a></p></div> """
 
 TOC_START = """
 <br>
@@ -186,7 +186,7 @@ def defancify(text):
 def make_categories_header(categories, root_path):
     o = ['<center><div class="toc-category-container">']
     for index, category in enumerate(categories, start=1):
-        template = '<span class="toc-category" style="font-size:95%"><a alt="{}" href="{}/categories/{}.html">{}</a></span>'
+        template = '<span class="toc-category" style="font-size:115%"><a alt="{}" href="{}/categories/{}.html">{}</a></span>'
         o.append(template.format(category, root_path,
                  category, category.capitalize()))
 
@@ -302,18 +302,22 @@ if __name__ == '__main__':
     print("Building tables of contents...")
 
     homepage_toc_items = [
-        make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas
+        make_toc_item(global_config, metadata, '.') for metadata in sorted_metadatas if
+        # Filter posts that are not in the homepage category
+        global_config.get('homepage_category',
+                          '') in metadata['categories'].union({''})
     ]
 
     for category in categories:
-        if category == global_config.get('homepage_category'):
-            category_toc_items = [make_toc_item(
-                global_config, metadata, '..') for metadata in sorted_metadatas]
-        else:
-            category_toc_items = [
-                make_toc_item(global_config, metadata, '..') for metadata in sorted_metadatas if
-                category in metadata['categories']
-            ]
+        # Enable to concat all categories into homepage_category
+        # if category == global_config.get('homepage_category'):
+        #     category_toc_items = [make_toc_item(
+        #         global_config, metadata, '..') for metadata in sorted_metadatas]
+        # else:
+        category_toc_items = [
+            make_toc_item(global_config, metadata, '..') for metadata in sorted_metadatas if
+            category in metadata['categories']
+        ]
 
         toc = make_toc(category_toc_items, global_config, categories, category)
         open(os.path.join('site', 'categories', category+'.html'), 'w').write(toc)
