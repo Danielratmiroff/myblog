@@ -90,9 +90,9 @@ We will use this score to let the AI know which positions are good or bad.
 // Idea behind evaluation function
 function evaluateBoard(game: Chess) {
   const board = game.board();
-  var totalEvaluation = 0;
-  for (var row = 0; row < 8; row++) {
-    for (var col = 0; col < 8; col++) {
+  let totalEvaluation = 0;
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
       totalEvaluation += getPieceValue(board[row][col], row, col);
     }
   }
