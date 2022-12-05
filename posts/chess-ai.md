@@ -3,8 +3,6 @@
 [title]: <> (Chess AI)
 [color]: <> (green)
 
-## Overview
-
 ![AI](https://img.shields.io/badge/AI-100-purple)
 ![smartass](https://img.shields.io/badge/smartass-69-green)
 
@@ -43,8 +41,8 @@ Once we got the board and input validation going, things start to get interestin
 ## AI 🤖
 
 > "AI without data, go prrrrrrrrrrrrr."
-
-> -- Anounymus Philosopher
+>
+> -- Anonymous Philosopher
 
 We don't want an AI that just plays random moves, so we need to give it data to evaluate which moves are better.
 
