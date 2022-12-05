@@ -14,11 +14,11 @@ I built an AI that plays chess and it kicked my ass
 
 [Source code](https://github.com/Danielratmiroff/chess-ai) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
-**What does it do?**
+## What does it do?
 
 - Plays "good" moves
-- Beats other players
-- Speaks when beating other players
+- Beats other player
+- Speaks when beating other player
 
 ## How?
 
@@ -40,7 +40,7 @@ I used:
 
 Once we got the board and input validation going, things start to get interesting...
 
-## AI
+## AI 🤖
 
 > "AI without data, go prrrrrrrrrrrrr."
 
@@ -125,11 +125,7 @@ I chose to implement the **Minimax algorithm** with **Alpha-beta prunning**. Wha
 
 _Wow, that is awesome! but I didn't understand a single word!_
 
-&nbsp;
-
 I recommend watching John Levine's awesome video explaining how the Minimax algorithm with Alpha Prunning works: [Minimax Explanation](https://www.youtube.com/watch?v=zp3VMe0Jpf8&ab_channel=JohnLevine)
-
-&nbsp;
 
 **In simple words**: Minimax recursevily evaluates the possible moves and alpha-prunning makes it go fast\*
 
@@ -230,7 +226,7 @@ function calculateBestMove(depthLvl: number): [Move, number] {
 
 There is a thing called [The horizon effect](https://www.chessprogramming.org/Horizon_Effect), which is caused by limited depth of the search algorithm. You can further reduce it by adding _quiescence search_.
 
-## More humane AI
+## More humane AI 📢
 
 To soft things off, I added audio to the AI, so it now not only it does kick my ass but it does vocalize it as well.
 
