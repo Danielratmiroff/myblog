@@ -100,7 +100,7 @@ function evaluateBoard(game: Chess) {
 
 _Get the whole function: [Evaluation function](https://github.com/Danielratmiroff/chess-ai/blob/master/src/lib/components/evaluateBoard.ts)_
 
-## Think AI, think!
+## Think AI, think! 🧠
 
 I chose to implement the **Minimax algorithm** with **Alpha-beta prunning**. What do those fancy words mean?
 
