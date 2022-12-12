@@ -274,4 +274,4 @@ Hope you have a fun time!
 
 ## UI Design:
 
-![Screenshot](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/chessai/ai-screenshot.png)\
+![Screenshot](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/chessai/ai-screenshot.png)
