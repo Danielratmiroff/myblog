@@ -3,12 +3,15 @@
 [title]: <> (Gai - AI for Git)
 [color]: <> (green)
 
-[Github](https://github.com/Danielratmiroff/gai) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
-[PyPI](https://pypi.org/project/gai-tool/) ![PyPI](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 # Gai is an AI-Powered Automation Tool for Git 🚀
 
 command-line application that automates git commit messages and merge requests using AI. 
+
+
+[Github](https://github.com/Danielratmiroff/gai) ![Github](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
+
+[PyPI](https://pypi.org/project/gai-tool/) ![PyPI](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/linkicon.svg)
 
 ![Demo](/images/gai/video_demo.gif)
 
@@ -156,35 +159,3 @@ Build gai-tool from source:
    ```bash
    pip install dist/gai_tool-0.1.0-py3-none-any.whl
    ```
-
-
-### Overview
-
-The app should include:
-
-- Task management system
-- Creation/Edition of documents
-- Meetings & Deadlines tracker
-- Calendar view
-
-It needed to have a nice UI, since I wanted to have a pleasent experience while using it 😀
-
-### UI Design:
-
-![Dashboard](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/dashboard.jpg)\
-
----
-
-![Documents](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/documents.jpg)\
-
----
-
-![Calendar](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/calendar.jpg)\
-
----
-
-![New task](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/newtask.jpg)\
-
----
-
-![New meeting](https://raw.githubusercontent.com/Danielratmiroff/myblog/master/images/projectmanager/newmeeting.jpg)\
