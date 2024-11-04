@@ -12,6 +12,8 @@ https://vitalik.ca for blogmaker.
 
 https://hackmd.io for CSS styles.
 
-### Hint to myself:
+---
+
+#### Hint to myself:
 
 Project is built within your CI/CD, just push your changes :) 
